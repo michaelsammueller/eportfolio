@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael's E-Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/michaelsammuellerlogo.png" alt="" /></span><span class="title">Michael Sammueller</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="computerscience.html">Launching into Computer Science</a></li>
+							<li><a href="securesoftwaredevelopment.html">Secure Software Development</a></li>
+							<li><a href="oop.html">Object Oriented Programming</a></li>
+							<li><a href="securityriskmanagement.html">Security Risk Management</a></li>
+							<li><a href="projectmanagement.html">Software Engineering Project Management</a></li>
+							<li><a href="researchmethods.html">Research Methods and Professional Practice</a></li>
+							<li><a href="personalprojects.html">Personal Projects</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Unit 1: Object-Oriented Programs and Classes</h1>
+							<h2>Learning Outcomes:</h2>
+							<p>In this unit, we shall:</p>
+							<ul>
+								<li>Examine what it means for a program to be object-oriented</li>
+								<li>Explore the syntax used to define a Python class</li>
+								<li>Investigate how to define different data types in Python</li>
+							</ul>
+							<p>On completion of this unit, you will be able to:</p>
+							<ul>
+								<li>Describe the major features of an object-oriented program, in the sense of having abstract classes, applying inheritance, using encapsulation, and including polymorphism</li>
+								<li>Define a Python class</li>
+								<li>Define a variety of data types to variables in a Python program and adapt the access modifier applied to each</li>
+							</ul>
+							<hr />
+							<h2>Defining a class - Examples and Experimentation</h2>
+							<code>class Box:</code><br>
+							<code>def __init__(self, length, width, depth):</code><br>
+							<code>self.length = length</code><br>
+							<code>self.width = width</code><br>
+							<code>self.depth = depth</code>
+							<p></p>
+							<code>class Television:</code><br>
+							<code>def __init__(self, length, width, resolution, brand):</code><br>
+							<code>self.length = length</code><br>
+							<code>self.width = width</code><br>
+							<code>self.resolution = resolution</code><br>
+							<code>self.brand = brand</code><br>
+							<p></p>
+							<code>class Book:</code><br>
+							<code>def __init__(self, author, publisher, title, price):</code><br>
+							<code>self.author = author</code><br>
+							<code>self.publisher = publisher</code><br>
+							<code>self.title = title</code><br>
+							<code>self.price = price</code><br>
+							<hr />
+							<h4>Comment</h4>
+							<p>Creating classes seems pretty simple, although I don't like to assume things. Classes are a blueprint/template. An object is an instance of a class, which uses the blueprint. As far as I understand it, I can create an instance as such:</p>
+							<p></p>
+							<code>book = Book("J.R.R. Tolkien", "Houghton Mifflin", "The Fellowship of the Ring", 10)</code>
+							<p></p>
+							<p>The above creates an instance of the "Book" class with custom values. It's pretty clear why a class is a "blueprint". To create these blueprints, we can try to understand whcih states and behaviours an object has.</p>
+							<hr />
+							<h3>What is an Object-Oriented Program?</h3>
+							<p>An object-oriented program is a piece of software that focuses on objects and the object-oriented paradigm.</p>
+							<hr />
+							<h3>Major Features of an Object-Oriented Program</h3>
+							<p><b>Abstraction</b></p>
+							<p>This refers to the process of reducing an object to its most relevant data. This reduces complexity and increases efficiency. Basically, you are taking a real-life object and reducing it to its basics, so it can be represented in code.</p>
+							<p><b>Encapsulation</b></p>
+							<p>This refers to the process of combining states, behaviors, and data into a single unit called a "class". Data is accessed through the class. This also makes data hiding possible, something that can be useful in some scenarios.</p>
+							<p><b>Inheritance and Polymorphism</b></p>
+							<p>Once common behaviours or states have been identified, classes can inherit from each other, an aspect that makes object-oriented code so reusable.</p>
+							<code>class Animal:</code><br>
+							<code>def __init__(self, name, color, breed):</code><br>
+							<code>self.name = name</code><br>
+							<code>self.color = color</code><br>
+							<code>self.breed = breed</code><br>
+							<code></code><br>
+							<code>def make_sound(self):</code><br>
+							<code>return "The animal makes a sound"</code><br>
+							<p></p>
+							<code>class Dog(Animal):</code><br>
+							<code>def make_sound(self)</code><br>
+							<code>return "Woof!"</code><br>
+							<p></p>
+							<p>The "Dog" class inherits from the "Animal" class. All animals have a name, a color, and a breed, meaning they can all inherit these aspects from the "Animal" parent class. The "Dog" class modifies the "make_sound()" method of the parent.</p>
+							<p>A class that is inherited from is known as a 'superclass'. A class that inherits is known as a 'subclass'. Polymorphism, as demonstrated above, can be achieved with method overloading and method overriding. In our example, the "make_sound()" method of the parent class is overridden by the child class.</p>
+							<hr />
+							<h2>Discussion</h2>
+							<h4>Initial Post</h4>
+							<span class="image main"><img src="images/Initial Post.png" alt="" class="center"/></span>
+							<h4>Feedback 1</h4>
+							<span class="image main"><img src="images/Feedback 1.png" alt="" class="center"/></span>
+							<h4>Feedback 2</h4>
+							<span class="image main"><img src="images/Feedback 2.png" alt="" class="center"/></span>
+							<h4>Summary Post</h4>
+							<span class="image main"><img src="images/Summary Post.png" alt="" class="center"/></span>
+							<h4>Feedback</h4>
+							<span class="image main"><img src="images/Feedback 3.png" alt="" class="center"/></span>
+							<hr />
+							<h4>Article Review</h4>
+							<p>This article discusses and investigates the utilization of ePortfolios within the realm of graduate adult education, with a focus on their potential to promote more reflective and deeper learning outcomes. The authors of this article acknowledge the scarcity of literature on the topic and address this gap through their research. They draw upon various studies and proponents, such as John Zubizarreta and John Dewey, who have championed the use of ePortfolios for this purpose.</p>
+							<p>The article also emphasizes the correlation between reflective learning, transformative learning, and deeper learning. Furthermore, the authors posit that ePortfolios can serve as more than just a compilation of student work and that their true value lies in the reflection documented within them.</p>
+							<p>As a university student, my understanding of portfolios, specifically ePortfolios, has evolved from a previous perception of them as a mere collection of one’s accomplishments to a valuable tool for reflective practice and documenting personal growth. The authors of this article highlight the importance of reflection within ePortfolios and the ability to track one’s progress over time, which was not previously emphasized during my high school education. This shift in perspective highlights the importance of proper implementation and understanding of the purpose and potential of such tools in education.</p>
+							<hr />
+							<h4>Python Program using Protected and Unprotected Values</h4>
+							<span class="image main"><img src="images/Python Program.png" alt="" class="center"/></span>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/michaelsammueller" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Michael Sammueller. All rights reserved</li><li>Original Design by: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
