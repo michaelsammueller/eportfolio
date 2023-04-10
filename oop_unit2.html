@@ -53,9 +53,108 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Object Oriented Programming</h1>
-							<span class="image main"><img src="images/comingsoon.jpg" alt="" class="center"/></span>
-							<p><sub><a href="https://www.freepik.com/free-vector/flat-coming-soon-background_12977982.htm#page=2&query=coming%20soon&position=24&from_view=search">Image by pikisuperstar</a> on Freepik</sub></p>
+							<h1>Unit 2: Object Oriented Analysis</h1>
+							<h2>Learning Outcomes:</h2>
+							<p>In this unit, we shall:</p>
+							<ul>
+								<li>Explore the ways in which actors interact with software in terms of functional requirements of a piece of software</li>
+								<li>Identify the interactions and behaviours invoked within software once active using a state machine diagram</li>
+							</ul>
+							<p>On completion of this unit, you will be able to:</p>
+							<ul>
+								<li>Design a use case diagram for a software development scenario</li>
+								<li>Create a state machine diagram to examine the behaviours and interactions within a system</li>
+							</ul>
+							<hr />
+							<h2>Notes</h2>
+							<p><b>State Machines:</b> A model that describes the behaviour of an object in response to events it receives.</p>
+							<p><b>Events:</b> A noteworthy occurence that is characterized by its consequences.</p>
+							<p><b>Call Event:</b> A reception of a call by an object that implements an operation as a state machine transition instead of a fixed procedure.</p>
+							<p><b>Change Event:</b> The satisfaction of a boolean expression that depends on specific attribute values.</p>
+							<p><b>Time Event:</b> Caused by signals from the operating system or an object in the application - an event representing the passage of time.</p>
+							<p><b>State:</b> Represents a period of time in an objects life.</p>
+							<p><b>Transition:</b> Represents the response of an object to an event - consists of a trigger, a guard condition, an action, and a target state.</p>
+							<p><b>Trigger Event:</b> The trigger of a transition is an event that allows the transition to occur.</p>
+							<p><b>Guard Condition:</b> Condition that is evaluated when a trigger event occurs to determine if the transition fires.</p>
+							<p><b>Completion Transition:</b> Triggered by the completion of an activity in the state it leaves.</p>
+							<p><b>Action:</b> A brief computation executed when a transition fires. Can be an assignment statement, arithmetic computation, sending a signal to another object, etc.</p>
+							<p><b>Change of State:</b> When the execution of the action is complete, the target state of the transition becomes active.</p>
+							<p><b>Nested States:</b> States can be nested within other composite states.</p>
+							<p><b>Entry and Exit Actions:</b> A transition can cause exit and entry of states. A state may have actions that are performed when it is entered or exited.</p>
+							<p><b>Internal Transition:</b> Has a source but no target state, meaning it does not change the active state when fired.</p>
+							<p><b>Composite State:</b> Decomposed into sequential or concurrent substates - entering or exeting the composite state will trigger the corresponding entry/exit actions.</p>
+							<p><b>Hashmap:</b> Also known as dictionary or associative array - data structure that allows you to store and retrieve values based on a key.</p>
+							<p><b>Polymorphic Functions:</b> Functions that work with several types.</p>
+							<hr />
+							<h2>Debugging</h2>
+							<p>There are several ways to check if values/arguments are valid.</p>
+							<p>Example function:</p>
+							<code>def valid_time(time):</code><br>
+							<code>if time.hour < 0 or time.minute < 0 or time.second < 0:</code><br>
+							<code>return False</code><br>
+							<code>if time.minute >= 60 or time.second >= 60:</code><br>
+							<code>return False</code><br>
+							<code>return True</code><br>
+							<p></p>
+							<p>We can use this function to check our code. For example:</p>
+							<p></p>
+							<code>def add_time(t1, t2):</code><br>
+							<code>if not valid_time(t1) or not valid_time(t2):</code><br>
+							<code>raise ValueError('invalid Time object in add_time')</code><br>
+							<code>seconds = time_to_int(t1) + time_to_int(t2)</code><br>
+							<code>return int_to_time(seconds)</code><br>
+							<p></p>
+							<p>We can also use assert statements:</p>
+							<p></p>
+							<code>def add_time(t1, t2):</code><br>
+							<code>assert valid_time(t1) and valid_time(t2)</code><br>
+							<code>seconds = time_to_int(t1) + time_to_int(t2)</code><br>
+							<code>return int_to_time(seconds)</code><br>
+							<p></p>
+							<p>For debugging purposes, keep this function handy:</p>
+							<pre><code> 
+def print_attributes(obj);								
+	for attr in vars(obj);
+		print(attr, getattr(obj, attr));
+							</code></pre>
+							<hr />
+							<h2>Further experimentation with protected and unprotected values:</h2>
+								<pre><code>
+class ProtectedValue:
+	def __init__(self, value):
+		self.value = value
+
+	def get_value(self):
+		return self.value
+
+	def set_value(self, value):
+		self.value = value
+
+
+class UnprotectedValue:
+	def __init__(self, value):
+		self.value = value
+
+p = ProtectedValue(10)
+print(p.get_value()) # Output: 10
+
+u = UnprotectedValue(20)
+print(u.value) # Output: 20
+								</code></pre>
+								<p>In this program, the ProtectedValue class represents a protected value that can only be accessed using its get_value method and modified using its set_value method. On the other hand, the UnprotectedValue class represents an unprotected value that can be accessed and modified directly. This distinction is useful in scenarios where you want to ensure that the value is only manipulated in a certain way or you want to encapsulate the data to prevent direct manipulation.</p>
+								<hr />
+								<h2>Responses to my peers</h2>
+								<h4>Peer Post 1</h4>
+								<span class="image main"><img src="images/Unit 2 Intial Post.png" alt="" class="center"/></span>
+								<h4>Response 1</h4>
+								<span class="image main"><img src="images/Unit 2 Response 1.png" alt="" class="center"/></span>
+								<h4>Peer Post 2</h4>
+								<span class="image main"><img src="images/Unit 2 Initial Post 2.png" alt="" class="center"/></span>
+								<h4>Response 2</h4>
+								<span class="image main"><img src="images/Unit 2 Response 2.png" alt="" class="center"/></span>
+								<hr />
+								<h2>Comments</h2>
+								<p>This unit was very informative. Originally, the amount of information presented seemed quite overwhelming, but reading the articles, responding to my peers, working through the Codio activities, and watching the seminar really helped to further my understanding of the information presented in this unit. After having completed this unit, I appreciate the information we were given and I can say I fully understand it. It does make me realize that I sometimes overthink when I look at what we have to do for a unit - what may seem overwhelming at first is actually very manageable once you work through it.</p>
 						</div>
 					</div>
 

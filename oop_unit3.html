@@ -53,9 +53,172 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Object Oriented Programming</h1>
-							<span class="image main"><img src="images/comingsoon.jpg" alt="" class="center"/></span>
-							<p><sub><a href="https://www.freepik.com/free-vector/flat-coming-soon-background_12977982.htm#page=2&query=coming%20soon&position=24&from_view=search">Image by pikisuperstar</a> on Freepik</sub></p>
+							<h1>Unified Modelling Language (UML)</h1>
+							<h2>Learning Outcomes:</h2>
+							<p>In this unit, we shall:</p>
+							<ul>
+								<li>Be exposed to the common syntax used by the Unified Modelling Language.</li>
+								<li>Explore the major UML models which are used throughout the object oriented analysis, design and development process.</li>
+								<li>Design UML models to represent aspects of specific software systems.</li>
+							</ul>
+							<p>On completion of this unit, you will be able to:</p>
+							<ul>
+								<li>Recognise the syntax used to design UML models.</li>
+								<li>Distinguish between the UML models which are applicable at various stages of the Software Development Life Cycle (SDLC).</li>
+								<li>Develop UML models using open source tools.</li>
+							</ul>
+							<hr />
+							<h2>UML - Unified Modeling Language</h2>
+							<p>UML is an approach to create diagrams to document the aspects associated with software systems. It can support software analysis, design, and development. This can help provide a high-level overview of a system.</p>
+							<ul>
+								<li><b>Easily modified - </b>It is much easier to make modifications to a model than it is to modify code.</li>
+								<li><b>Overview of the System and Verifiable - </b>It can help provide a useful high-level overview of a system; can be used to check whether design meets specifications.</li>
+								<li><b>Standardized - </b> UML provides a standardized approach to communicating details of a system.</li>
+								<p></p>
+							</ul>
+							<h2>Types of UML Models</h2>
+							<p><b>Behavioural:</b> Capture the interactions between system components over time.</p>
+							<div class="inner">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Use Case Diagram</td>
+													<td>Defines the functional requirements of a system, the actors involved in using it, and the way in which the system responds.</td>
+												</tr>
+												<tr>
+													<td>Activity Diagram</td>
+													<td>Represent the behaviors in a system and the relationships between them over time.</td>
+												</tr>
+												<tr>
+													<td>State Machine Diagram</td>
+													<td>Captures the transitions of a system between states as activities are executed. Behaviour is represented using transition triggers and constraining guards.</td>
+												</tr>
+												<tr>
+													<td>Sequence Diagram</td>
+													<td>Show behaviour over time from the perspective of the classes in the proposed system involved and the communications sent between objects.</td>
+												</tr>
+												<tr>
+													<td>Communication Diagram</td>
+													<td>Show interactions between objects without the element of time as captured in sequence diagrams.</td>
+												</tr>
+												<tr>
+													<td>Timing Diagram</td>
+													<td>Capture the change in state or value of elements over time.</td>
+												</tr>
+											</tbody>
+											<tfoot>
+											</tfoot>
+										</table>
+									</div>
+							<p><b>Structural:</b> Represents components of a system and relationships between them.</p>
+							<div class="inner">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Class Diagram</td>
+													<td>Presents the structure of the system from the perspective of classes and objects which will be used to form the system. The class diagram also captures the attributes associated with each class and the behaviours which each class has.</td>
+												</tr>
+												<tr>
+													<td>Composite Structure Diagram</td>
+													<td>Show the classes, interfaces, packages, and the relationships between them.</td>
+												</tr>
+												<tr>
+													<td>Component Diagram</td>
+													<td>Shows the components in a system, the provided and required interfaces, ports, and relationships between them.</td>
+												</tr>
+												<tr>
+													<td>Deployment Diagram</td>
+													<td>Show the execution of a system and are used to visualize the hardware and software of a system.</td>
+												</tr>
+												<tr>
+													<td>Object Diagram</td>
+													<td>Represent instances of classes in a system. It is a view of the system at a specific point in time.</td>
+												</tr>
+												<tr>
+													<td>Package Diagram</td>
+													<td>Show the organization of the elements in a system in the form of packages.</td>
+												</tr>
+											</tbody>
+											<tfoot>
+											</tfoot>
+										</table>
+									</div>
+							<p><b>Architectural:</b> Capture a high-level perspective of the system.</p>
+							<p></p>
+							<hr />
+							<h2>Problems associated with UML</h2>
+							<p><b>Consistency:</b> If the development process is supported using multiple teams, and these teams have differing understandings of how the system functions as well as of the styles of modelling, then this will lead to a decrease in consistency.</p>
+							<p><b>Shortcuts:</b> UML can be applied in an informal way, with the potential consequence of shortcuts being taken and developers using an even more sketchy approach in the creation of models.</p>
+							<p><b>Notation:</b> Developers may use their own notation in the design of UML models, which limits the effectiveness of a standardized approach to representing system design diagrammatically.</p>
+							<p><b>Quality:</b> The quality of diagrams can also be a problem, given that models can be represented in various ways using UML. This may not impact the design of a system overall. However, it can impact the way in which a model is understood.</p>
+							<hr />
+							<h2>Additional Activities</h2>
+							<p><i>Think of a recent programming project you've completed. Identify the most prominent objects in the design.</i></p>
+							<p>The most recent programming project I have completed is a script that extracts information from a simulation exercise file. The most prominent objects in this exercise file are flights (aeroplanes), the exercise itself, and frequencies (radio frequencies).</p>
+							<p></p>
+							<hr />
+							<p><i>What attribute types did they have? Where these attributes actually behaviours?</i></p>
+							<p>The attributes of these objects consist of primitive data types. Each flight has a speed, altitude, route, departure aerodrome, arrival aerodrome etc.</p>
+							<p></p>
+							<hr />
+							<p><i>Think of a future project. Conduct basic object-oriented analysis and define major and minor objects. Identify the requirements and interacting systems. Sketch out a class diagram. Go into detail about the attributes and methods of some of the most interesting ones. Look for places where you could use inheritance or composition. Look for places where you should avoid inheritance.</i></p>
+							<pre>My next project will be a booking system which will allow customers to book simulator sessions.
+
+The first objects that come to mind are:
+
+- The simulators
+- Exercises
+
+Their attributes would be as follows:
+
+- <b>Simulators: Room Number, Capacity, Type</b>
+- <b>Exercises: Type, Difficulty Level, Duration</b>
+
+Those are the first objects and attributes that come to mind.
+
+<b>Requirements:</b> A user (in our case, a person) would have to be able to access the system to make a new booking. If the user is already registered with the booking system, they would then select 
+the simulator they would like to use, as well as the type of training they would like to conduct, how many students they would like to register to this course and what exercise they would like to run. 
+In case the user is not yet registered, they would have to make an account and enter their credentials before being able to make a booking. After all details have been filled in, the user would select 
+a date and time (what we would refer to as a “slot”). If this slot is already taken, the system would inform the user, and the user would then be able to choose a different slot. If the slot is available, 
+the user can add the booking and the system would notify the supervisor about the new booking. The supervisor would then be able to accept or reject this booking.
+							
+							</pre>
+							<span class="image main"><img src="images/Class Diagram Simulator.png" alt="" class="center"/></span>
+							<sup>High-Level Class Diagram of this system.</sup>
+							<p></p>
+							<pre>In our basic diagram, each class has one method:
+
+- <b>canbook():</b> This method calls the isavailable() method of the Simulator class (see below). Since our system assumes that only users who are entitled to make bookings have access to it, 
+it doesn’t check whether the person is entitled to do so.
+- <b>isavailable():</b> This method is called by the canbook() method and checks whether the simulator is available during the requested time slot by comparing the time slot to other bookings 
+or scheduled maintenance activities. If the time slot does not match with any of the aforementioned and the requested capacity matches with the total capacity, the method returns TRUE.
+
+<b>Abstractions:</b> For our booking system to work, the program doesn’t need to know the setup of each particular simulator, nor does it need to know the details of each exercise.
+							
+							</pre>
+							<hr />
+							<h2>State Chart Diagram of a Washing Machine</h2>
+							<span class="image main"><img src="images/Washing Machine.png" alt="" class="center"/></span>
+							<hr />
+							<p>Based on what I have learned in Unit 3 so far, UML consists of the following three model types:</p>
+							<p><b>Behavioural:</b> Capture the interactions between system components over time.</p>
+							<p><b>Structural:</b> Represent components of a system and relationships between them.</p>
+							<p><b>Architectural</b> Capture a high-level perspective of the system.</p>
+							<p>To initially create a basic sketch of a system in order to outline ideas, architectural models are helpful as they provide a high-level perspective of the system. This is especially useful if it is done together with a customer who might not be as technically literate; however, the benefits don’t end there. It also allows a product designer/developer to have an initial, basic understanding of the system, which will allow them to start planning the system in more detail. This, however, is not the only type of model that can be helpful/useful at this stage. Behavioural models such as “Use Case” diagrams allow for very basic initial sketching of how a system might be used by one of its actors. For example, if one is developing a leave management program, looking at it from a user’s point of view might prove useful for understanding how it works and for classifying objects, behaviours and methods.</p>
+							<p>After the initial overview, structural models appear to be the logical consequence. This allows a team to design and understand the components of a system and the relationships between them.</p>
+							<p>Thirdly, behavioural models allow the team to design the interactions between systems and components and understand how their behaviour will change over time.</p>
 						</div>
 					</div>
 
