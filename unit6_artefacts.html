@@ -57,53 +57,30 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Unit 6: Abstract Methods and Interfaces</h1>
-							<p>In this unit, we shall:</p>
-							<ul>
-								<li>Consider the benefits of using interfaces in Python.</li>
-								<li>Develop a Python program which uses interfaces.</li>
-								<li>Recognise the metrics which are used to evaluate the effectiveness of an object oriented program.</li>
-							</ul>
-							<p>On completion of this unit, you will be able to:</p>
-							<ul>
-								<li>Describe the ways in which interfaces support Python code design.</li>
-								<li>Write a Python program which applies interfaces.</li>
-								<li>Define the metrics by which an object oriented program can be assessed.</li>
-							</ul>
+							<h1>Unit 5: Artefacts</h1>
+							<h2 class="align-center">Metrics</h2>
+							<p class="align-center">Task: Discuss the metrics used to assess the features of an object oriented program:</p>
+							<p><b>1. Number of Methods:</b> The amount of methods used within a class directly influence the complexity of the program.</p>
+							<p><b>2. Cohesion:</b> Cohesion is used to measure the relationships of methods within clases. Methods that are more "self-contained" or "standalone" are easier to modify and change, as changing them will not have a knock-on effect on other methods within the class.</p>
+							<p><b>3. Depth of Inheritance:</b> Measuring the hierarchy levels within classes can be important, as code that has high levels of inheritance can become complicated very quickly. Not only does this make the code hard to maintain, but changing something minor in one method or class might break functionality within something that inherits from the class that was changed.</p>
+							<p><b>4. Coupling:</b> In similar fashion to inheritance depth, coupling can also have a negative impact on reusability and maintainability. If methods or classes are too tightly connected, then changing them ever so slightly might break the entire functionality of the program.</p>
+							<p>These are just a few examples of metrics used to measure and assess object-oriented code.</p>
 							<hr />
-							<h2><a href="unit6_artefacts.html">Artefacts</a></h2>
-							<h2><a href="unit6_reflection.html">Reflection</a></h2>
+							<h2 class="align-center">Bank Program</h2>
+							<p class="align-center">Task: Develop a Python porgram which has three abstract methods and one subclass which allows a user to perform banking operations.</p>
+							<span class="image main"><img src="images/unit6_bank1.png" alt="" class="center"></span>
+							<span class="image main"><img src="images/unit6_bank3.png" alt="" class="center"></span>
+							<p class="align-center">To create this program, I first designed an "Account" class that mimics the behaviour of a bank account. This class has three abstract methods, which are: deposit(), withdraw(), check_current() and check_savings(). Within an object of the "Customer" class, the balance of each account is stored together with the name of the customer. Since "Account" is an abstract class with abstract methods, and "Customer" inherits these from "Account", we can now perform banking transactions like "withdrawal", "deposit", or checking the balance of our accounts from within the "Customer" class.</p>
+							<hr />
+							<h2 class="align-center">Codio</h2>
+							<p class="align-center">As part of my studies and practice, I completed the "Encapsulation" unit on Codio.</p>
+							<span class="image main"><img src="images/unit6_codio.png" alt="" class="center"></span>
 						</div>
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="https://github.com/michaelsammueller" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
 							<ul class="copyright">
 								<li>&copy; Michael Sammueller. All rights reserved</li><li>Original Design by: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
