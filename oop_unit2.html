@@ -39,14 +39,18 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="computerscience.html">Launching into Computer Science</a></li>
-							<li><a href="securesoftwaredevelopment.html">Secure Software Development</a></li>
-							<li><a href="oop.html">Object Oriented Programming</a></li>
-							<li><a href="securityriskmanagement.html">Security Risk Management</a></li>
-							<li><a href="projectmanagement.html">Software Engineering Project Management</a></li>
-							<li><a href="researchmethods.html">Research Methods and Professional Practice</a></li>
-							<li><a href="personalprojects.html">Personal Projects</a></li>
+							<li><a href="oop_unit1.html">Unit 1 - Introduction to Python Programming and the OO Programming Paradigm</a></li>
+							<li><a href="oop_unit2.html">Unit 2 - Object Oriented Analysis</a></li>
+							<li><a href="oop_unit3.html">Unit 3 - Unified Modelling Language (UML)</a></li>
+							<li><a href="oop_unit4.html">Unit 4 - Applying a UML Model to a Program Implementation</a></li>
+							<li><a href="oop_unit5.html">Unit 5 - More on Classes</a></li>
+							<li><a href="oop_unit6.html">Unit 6 - Abstract Methods and Interfaces</a></li>
+							<li><a href="oop_unit7.html">Unit 7 - Debugging, Error Handling, Data Structures and Data Search</a></li>
+							<li><a href="oop_unit8.html">Unit 8 - Data Structures and Data Search in Practice</a></li>
+							<li><a href="oop_unit9.html">Unit 9 - Packaging and Testing</a></li>
+							<li><a href="oop_unit10.html">Unit 10 - Testing Code in Practice</a></li>
+							<li><a href="oop_unit11.html">Unit 11 - Pointers, References, Memory, and Design Patterns</a></li>
+							<li><a href="oop_unit12.html">Unit 12 - Working with Design Patterns to Structure Code</a></li>
 						</ul>
 					</nav>
 
@@ -66,126 +70,14 @@
 								<li>Create a state machine diagram to examine the behaviours and interactions within a system</li>
 							</ul>
 							<hr />
-							<h2>Notes</h2>
-							<p><b>State Machines:</b> A model that describes the behaviour of an object in response to events it receives.</p>
-							<p><b>Events:</b> A noteworthy occurence that is characterized by its consequences.</p>
-							<p><b>Call Event:</b> A reception of a call by an object that implements an operation as a state machine transition instead of a fixed procedure.</p>
-							<p><b>Change Event:</b> The satisfaction of a boolean expression that depends on specific attribute values.</p>
-							<p><b>Time Event:</b> Caused by signals from the operating system or an object in the application - an event representing the passage of time.</p>
-							<p><b>State:</b> Represents a period of time in an objects life.</p>
-							<p><b>Transition:</b> Represents the response of an object to an event - consists of a trigger, a guard condition, an action, and a target state.</p>
-							<p><b>Trigger Event:</b> The trigger of a transition is an event that allows the transition to occur.</p>
-							<p><b>Guard Condition:</b> Condition that is evaluated when a trigger event occurs to determine if the transition fires.</p>
-							<p><b>Completion Transition:</b> Triggered by the completion of an activity in the state it leaves.</p>
-							<p><b>Action:</b> A brief computation executed when a transition fires. Can be an assignment statement, arithmetic computation, sending a signal to another object, etc.</p>
-							<p><b>Change of State:</b> When the execution of the action is complete, the target state of the transition becomes active.</p>
-							<p><b>Nested States:</b> States can be nested within other composite states.</p>
-							<p><b>Entry and Exit Actions:</b> A transition can cause exit and entry of states. A state may have actions that are performed when it is entered or exited.</p>
-							<p><b>Internal Transition:</b> Has a source but no target state, meaning it does not change the active state when fired.</p>
-							<p><b>Composite State:</b> Decomposed into sequential or concurrent substates - entering or exeting the composite state will trigger the corresponding entry/exit actions.</p>
-							<p><b>Hashmap:</b> Also known as dictionary or associative array - data structure that allows you to store and retrieve values based on a key.</p>
-							<p><b>Polymorphic Functions:</b> Functions that work with several types.</p>
-							<hr />
-							<h2>Debugging</h2>
-							<p>There are several ways to check if values/arguments are valid.</p>
-							<p>Example function:</p>
-							<code>def valid_time(time):</code><br>
-							<code>if time.hour < 0 or time.minute < 0 or time.second < 0:</code><br>
-							<code>return False</code><br>
-							<code>if time.minute >= 60 or time.second >= 60:</code><br>
-							<code>return False</code><br>
-							<code>return True</code><br>
-							<p></p>
-							<p>We can use this function to check our code. For example:</p>
-							<p></p>
-							<code>def add_time(t1, t2):</code><br>
-							<code>if not valid_time(t1) or not valid_time(t2):</code><br>
-							<code>raise ValueError('invalid Time object in add_time')</code><br>
-							<code>seconds = time_to_int(t1) + time_to_int(t2)</code><br>
-							<code>return int_to_time(seconds)</code><br>
-							<p></p>
-							<p>We can also use assert statements:</p>
-							<p></p>
-							<code>def add_time(t1, t2):</code><br>
-							<code>assert valid_time(t1) and valid_time(t2)</code><br>
-							<code>seconds = time_to_int(t1) + time_to_int(t2)</code><br>
-							<code>return int_to_time(seconds)</code><br>
-							<p></p>
-							<p>For debugging purposes, keep this function handy:</p>
-							<pre><code> 
-def print_attributes(obj);								
-	for attr in vars(obj);
-		print(attr, getattr(obj, attr));
-							</code></pre>
-							<hr />
-							<h2>Further experimentation with protected and unprotected values:</h2>
-								<pre><code>
-class ProtectedValue:
-	def __init__(self, value):
-		self.value = value
-
-	def get_value(self):
-		return self.value
-
-	def set_value(self, value):
-		self.value = value
-
-
-class UnprotectedValue:
-	def __init__(self, value):
-		self.value = value
-
-p = ProtectedValue(10)
-print(p.get_value()) # Output: 10
-
-u = UnprotectedValue(20)
-print(u.value) # Output: 20
-								</code></pre>
-								<p>In this program, the ProtectedValue class represents a protected value that can only be accessed using its get_value method and modified using its set_value method. On the other hand, the UnprotectedValue class represents an unprotected value that can be accessed and modified directly. This distinction is useful in scenarios where you want to ensure that the value is only manipulated in a certain way or you want to encapsulate the data to prevent direct manipulation.</p>
-								<hr />
-								<h2>Responses to my peers</h2>
-								<h4>Peer Post 1</h4>
-								<span class="image main"><img src="images/Unit 2 Intial Post.png" alt="" class="center"/></span>
-								<h4>Response 1</h4>
-								<span class="image main"><img src="images/Unit 2 Response 1.png" alt="" class="center"/></span>
-								<h4>Peer Post 2</h4>
-								<span class="image main"><img src="images/Unit 2 Initial Post 2.png" alt="" class="center"/></span>
-								<h4>Response 2</h4>
-								<span class="image main"><img src="images/Unit 2 Response 2.png" alt="" class="center"/></span>
-								<hr />
-								<h2>Comments</h2>
-								<p>This unit was very informative. Originally, the amount of information presented seemed quite overwhelming, but reading the articles, responding to my peers, working through the Codio activities, and watching the seminar really helped to further my understanding of the information presented in this unit. After having completed this unit, I appreciate the information we were given and I can say I fully understand it. It does make me realize that I sometimes overthink when I look at what we have to do for a unit - what may seem overwhelming at first is actually very manageable once you work through it.</p>
+							<h2><a href="unit2_artefacts.html">Artefacts</a></h2>
+							<h2><a href="unit2_reflection.html">Reflection</a></h2>
 						</div>
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="https://github.com/michaelsammueller" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
 							<ul class="copyright">
 								<li>&copy; Michael Sammueller. All rights reserved</li><li>Original Design by: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
