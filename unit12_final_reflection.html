@@ -57,34 +57,89 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Unit 11: Artefacts and Reflection</h1>
-							<h2 class="align-center">Working on my assignment</h2>
-							<p class="align-center">Download the assignment files <a href="https://github.com/michaelsammueller/university/tree/main/Module%2011%20Assignment/python-project">here.</a></p>
-							<p>The majority of my time during this unit was spent finalizing my assignment. When I first started working on it, I decided to separate the main operations from each other and assign them to their own Python file. After sketching out the initial classes and methods, I had three Python files:</p>
-							<ul>
-								<li>routeplanner.py</li>
-								<li>maintenancemonitor.py</li>
-								<li>energymonitor.py</li>
-							</ul>
-							<p>"routeplanner.py" is responsible for planning routes, as the name suggests. It will receive user input and the car's current location. Based on where it is and where the user wants to go, it would then navigate the car via the shortest route. While planning this system, I came across the A*- as well as Dijkstra's algorithm. After doing some research about these algorithms, I decided to implement Dijkstra's algorithm. I created a "graph" network for a ficticious version of Qatar's capital, Doha, where I currently reside. This graph network would include some main locations the user can navigate to, as well as "weights" or "costs" between them. The algorithm would then find the shortest route and "navigate" the car between current location and destination.</p>
-							<h2>References for Dijkstra's Algorithm</h2>
-							<ul>
-								<li>Bhargava, A. (2016) <i>Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People.</i> New York: Manning.</li>
-								<li>GeeksforGeeks (2023) Python Program for Dijkstra's shortest path algorithm | Greedy Algo-7. Available from: <a href="https://www.geeksforgeeks.org/python-program-for-dijkstras-shortest-path-algorithm-greedy-algo-7/">https://www.geeksforgeeks.org/python-program-for-dijkstras-shortest-path-algorithm-greedy-algo-7/</a> [Accessed 2 April 2023].</li>
-								<li>StackAbuse (2023) Dijkstra's Algorithm. Available from: <a href="https://stackabuse.com/courses/graphs-in-python-theory-and-implementation/lessons/dijkstras-algorithm/">https://stackabuse.com/courses/graphs-in-python-theory-and-implementation/lessons/dijkstras-algorithm/</a> [Accessed 2 April 2023].</li>
-								<li>AlgoDaily (N.D.) An Illustrated Guide to Dijkstra's Algorithm. Available from: <a href="https://algodaily.com/lessons/an-illustrated-guide-to-dijkstras-algorithm/python">https://algodaily.com/lessons/an-illustrated-guide-to-dijkstras-algorithm/python</a> [Accessed 3 April 2023].</li>
-							</ul>
-							<p>Choosing to include this algorithm in my code cost a lot of time, as I first had to learn how this algorithm works, and how I can customize it to fit my purposes. In the end though, I am happy I chose to include it, as it provides my software with much needed functionality, and it helps to demonstrate how my own functions work and how data is stored within my program.</p>
-							<h2>The other operations</h2>
-							<p>Next to "routeplanner.py", I had created "energymonitor.py" and "maintenancemonitor.py". "energymonitor.py" is responsible for monitoring the car's battery and energy levels. It is also responsible to approve routes calculated by the route planner. If the car doesn't have enough energy at all, the EnergyMontior can instruct the car to move to the closest charging station.</p>
-							<p>"maintenancemonitor.py" is responsible for monitoring all car parts and their conditions. Whenever the car takes a trip, the MaintenaneMonitor checks each part's deterioration and alerts the user in case a part has deteriorated too much.</p>
-							<h2>Other files</h2>
-							<p>Along the Python files for the three main operations, I created a Python file which hosts all navigational data, such as the "graph" network for Dijkstra's algorithm, as well as a list of charging stations within the city, which is used by the EnergyMonitor. I also created a file which hosts the user interface (userinterface.py). This file not only includes the code for the UserInterface class and its associated methods, but for a small terminal UI which can be used to execute various aspects of my code.</p>
-							<h2>The last steps</h2>
-							<p>Now began one of the main tasks: Testing. I had already used print() statements throughout my ocde to test individual functions. However, I now needed a way to test every Python file. Because I decided to write an individual file for each of the main operations, I had to import classes, objects, and other data between files. This meant I needed a way to continously test all aspects of my code without cluttering my terminal. That is where "assert" statements came in handy. I wrote an assert statement for each class, as well as each statement, and tested my code until it passed all tests without any errors raised. Next, I chose to use "pylint" to test my code design and formatting. Finally, I wrote the "ReadMe" file to dicuss various aspects of my code, and explain how to use it.</p>
-							<h2 class="align-center">Reflection</h2>
-							<p>Overall I am happy with how I tackled this assignment. I definitely think I might have planned much more than I was asked to do, but whenever I am working on a project, I want it to be perfect. There is nothing wrong with that, but this sometimes results in more work than necessary. For example: Did I really have to use Dijkstra's algorithm? Probably not. Does it add value to my project and bring it closer to a real driverless car system? Definitely.</p>
-							<p>Another aspect I want to improve on is testing. I waited until the end to write my assert statements. This did not help me in any way, it just made it more difficult to test the code later. A few errors and mistakes went unnoticed, and I had to rewrite large chunks of my code. The main cause of this was that I used several python files for my code, not just one. In the future, I plan to write assert statements or other tests while still working on my code. Additionally, I was so focused on the classes and methods of my project, that I completely forgot to write an actual user interface that could be used to run my code, so I had to do that at the end as well. For future projects, I will include the testing in my planning phase, where I would like to sketch out tests for my code, as well as ways to run the code, so I can avoid these issues towards the end.</p>
+							<h1>Unit 12: Final Reflection</h1>
+							<h2 class="align-center">Final Reflection</h2>
+							<p class="align-center">Read the text of the reflection below, or download the formatted document in Microsoft Word format <a href="https://github.com/michaelsammueller/university/blob/main/Object%20Oriented%20Programming/Final%20Reflection.docx">here.</a></p>
+							<h2>Introduction</h2>
+							<p>The “Object-Oriented Programming” module was a welcome change in pace compared to the previous module. The information presented in this course was not only challenging but also very informative. The course’s overall design helped facilitate a smooth learning curve, with each unit’s content being well-aligned with tests and assignments. In terms of my study approach, I ensured to adjust my habits based on the experience gained from the previous module. I focused on what was to come in future units, which helped me build a strong foundation of knowledge to complete the assignments successfully. Structuring my studies this way helped me stay focused and organised.</p>
+							<p>Within this document, I plan to reflect on my study and learning approach and assignments, as I recognise that there is still a need for improvement in some areas.</p>
+							<h2>Assignments</h2>
+							<p>I adjusted my approach to assignments, as I focused on gathering evidence and references first before choosing the topics of my assignments. This was especially useful for the unit 7 assignment, which required researching the capabilities of self-driving cars and developing a three-operation system. Although I had written down some initial ideas, I adjusted my work according to the results of my research. I also learned that it is incredibly beneficial to check the requirements of all assignments once I gain access to a new module, as this helps me structure my studies and research.</p>
+							<p>While I was generally satisfied with how I approached my studies and research up to this point, I noticed my tendency to overthink and select topics with vast scopes due to overambition or perfectionism. Instead, I could have chosen something more straightforward or achievable within our given time. Despite trying to pack as much into my assignments as possible, I always finish them and never leave anything unfinished.</p>
+							<p>Based on my design submitted in Unit 7, I was now faced with programming it in Unit 11, which proved to be a significant challenge. During my assignment research for Unit 7, I had already prepared code snippets I planned to use as part of the implementation. Based on the knowledge gathered in the preceding units, I adjusted large portions of these snippets, like using more appropriate data structures. Due to my interest in the topic of self-driving cars, I was eager to complete it. Despite trying to avoid it, I fell into the same pattern of trying to take on too much. I spent three days researching and implementing Dijkstra’s path-finding algorithm as part of the route-planning capability of my software.
+							Once again, I completed what I had set out to do, despite it costing a lot of time. I hope that, for future assignments, I can limit the scope of my designs and programs so that I don’t end up with too little time for what I have planned.</p>
+							<h2>Learning process</h2>
+							<p>Reading through the module content and assignments at the beginning of this module, I felt somewhat overwhelmed. Being a chronic overthinker, I tend to worry unnecessarily. Still, I am aware of this and knew that taking a step-by-step approach and watching the live sessions would help me perform adequately.</p>
+							<p>I have always been someone who wants to jump into action immediately, so I found that taking a step back and approaching my tasks little by little helps me to concentrate my energy on what matters – that way, I can structure my tasks more efficiently.</p>
+							<p>As expected, in following this approach, I never encountered problems, neither regarding time nor lack of knowledge or preparedness. Also, as mentioned in various studies about learning strategies, I found note-taking throughout each unit to be a valuable habit (Biwer et al., 2020). Writing down points of interest while reviewing the reading material in each unit helped build a strong foundation throughout my studies and enabled me to check my notes during and after each unit.</p>
+							<h2>Group Work</h2>
+							<p>Reflecting on my thought process can be beneficial, but receiving feedback from a third party can be even better. The group discussions throughout this module provided a platform for inter-student communication – a way to exchange thoughts with other course participants, as well as with my tutor. Due to how valuable this can be, I always participated in group discussions and replied to my fellow students.</p>
+							<p>One of the challenges of self-study is that, without explicitly going out of one's way, there is no way to check whether one has genuinely understood something until faced with an assignment or unit test. This can be a significant issue, but group discussions remove this problem altogether. By being able to interchange ideas (like in the example below) and see what others think, being able to look at the references they have chosen and comparing them with one's own thoughts, the danger of misunderstandings is mitigated greatly (see screenshot below).</p>
+							<h4 class="align-center">Initial Post</h4>
+							<span class="image main"><img src="images/Initial Post.png" alt="" class="center"></span>
+							<h4 class="align-center">Feedback</h4>
+							<span class="image main"><img src="images/Feedback 1.png" alt="" class="center"/></span>
+							<span class="image main"><img src="images/Feedback 2.png" alt="" class="center"/></span>
+							<p>Because I consider participating in these group activities essential, I have chosen each of them as one of my unit artefacts in my ePortfolio.</p>
+							<h2>Skills and Knowledge</h2>
+							<p>As discussed in my ePortfolio, I truly learned a lot in this module. For instance, before studying this module's contents, I was unaware of how to automate testing correctly, use the assert statement, raise custom errors, use linters to check code and use UML to design systems. Furthermore, learning about the object-oriented paradigm opened doors for me to improve my personal projects. As evidenced throughout my portfolio (see example below), I used this chance to experiment with my own code and projects, as I find that this significantly improves my understanding of coding principles (see screenshot below).</p>
+							<hr />
+							<h2 class="align-center">Additional Activities</h2>
+							<p class="align-center">The following activities were part of the reading material. I thought it would be best if I complete them as part of my practice:</p>
+							<hr />
+							<p><i>Think of a recent programming project you've completed. Identify the most prominent objects in the design.</i></p>
+							<p>The most recent programming project I have completed is a script that extracts information from a simulation exercise file. The most prominent objects in this exercise file are flights (aeroplanes), the exercise itself, and frequencies (radio frequencies).</p>
+							<p></p>
+							<hr />
+							<p><i>What attribute types did they have? Where these attributes actually behaviours?</i></p>
+							<p>The attributes of these objects consist of primitive data types. Each flight has a speed, altitude, route, departure aerodrome, arrival aerodrome etc.</p>
+							<p></p>
+							<hr />
+							<p><i>Think of a future project. Conduct basic object-oriented analysis and define major and minor objects. Identify the requirements and interacting systems. Sketch out a class diagram. Go into detail about the attributes and methods of some of the most interesting ones. Look for places where you could use inheritance or composition. Look for places where you should avoid inheritance.</i></p>
+							<pre>My next project will be a booking system which will allow customers to book simulator sessions.
+
+The first objects that come to mind are:
+
+- The simulators
+- Exercises
+
+Their attributes would be as follows:
+
+- <b>Simulators: Room Number, Capacity, Type</b>
+- <b>Exercises: Type, Difficulty Level, Duration</b>
+
+Those are the first objects and attributes that come to mind.
+
+<b>Requirements:</b> A user (in our case, a person) would have to be able to access the system to make a new booking. 
+If the user is already registered with the booking system, they would then select 
+the simulator they would like to use, as well as the type of training they would like to conduct, how many students they 
+would like to register to this course and what exercise they would like to run. 
+In case the user is not yet registered, they would have to make an account and enter their credentials before being able 
+to make a booking. After all details have been filled in, the user would select 
+a date and time (what we would refer to as a “slot”). If this slot is already taken, the system would inform the user, 
+and the user would then be able to choose a different slot. If the slot is available, 
+the user can add the booking and the system would notify the supervisor about the new booking. The supervisor would 
+then be able to accept or reject this booking.
+							
+							</pre>
+							<span class="image main"><img src="images/Class Diagram Simulator.png" alt="" class="center"/></span>
+							<sup>High-Level Class Diagram of this system.</sup>
+							<p></p>
+							<pre>In our basic diagram, each class has one method:
+
+- <b>canbook():</b> This method calls the isavailable() method of the Simulator class (see below). Since our system assumes 
+that only users who are entitled to make bookings have access to it, 
+it doesn’t check whether the person is entitled to do so.
+- <b>isavailable():</b> This method is called by the canbook() method and checks whether the simulator 
+is available during the requested time slot by comparing the time slot to other bookings or scheduled maintenance activities. If the time slot does not match with any of the aforementioned and the requested capacity matches with the total capacity, the method returns TRUE.
+
+<b>Abstractions:</b> For our booking system to work, the program doesn’t need to know the setup of each particular simulator, 
+nor does it need to know the details of each exercise.
+							
+							</pre>
+							<hr />
+							<h2>Conclusion</h2>
+							<p>All in all, I am satisfied with my approach to this module. I was able to apply my experience from the last module and improve on my shortcomings. Moving forward, I hope I can throttle my tendency to overthink and limit the scope of my designs to avoid running into dead-ends or problems with deadlines. Although this has not happened yet, it would be best to change these habits sooner rather than later.</p>
 						</div>
 					</div>
 

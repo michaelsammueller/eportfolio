@@ -106,11 +106,16 @@ Their attributes would be as follows:
 
 Those are the first objects and attributes that come to mind.
 
-<b>Requirements:</b> A user (in our case, a person) would have to be able to access the system to make a new booking. If the user is already registered with the booking system, they would then select 
-the simulator they would like to use, as well as the type of training they would like to conduct, how many students they would like to register to this course and what exercise they would like to run. 
-In case the user is not yet registered, they would have to make an account and enter their credentials before being able to make a booking. After all details have been filled in, the user would select 
-a date and time (what we would refer to as a “slot”). If this slot is already taken, the system would inform the user, and the user would then be able to choose a different slot. If the slot is available, 
-the user can add the booking and the system would notify the supervisor about the new booking. The supervisor would then be able to accept or reject this booking.
+<b>Requirements:</b> A user (in our case, a person) would have to be able to access the system to make a new booking. If the 
+user is already registered with the booking system, they would then select 
+the simulator they would like to use, as well as the type of training they would like to conduct, how many students 
+they would like to register to this course and what exercise they would like to run. 
+In case the user is not yet registered, they would have to make an account and enter their credentials before being able 
+to make a booking. After all details have been filled in, the user would select 
+a date and time (what we would refer to as a “slot”). If this slot is already taken, the system would inform the user, 
+and the user would then be able to choose a different slot. If the slot is available, 
+the user can add the booking and the system would notify the supervisor about the new booking. The supervisor would then 
+be able to accept or reject this booking.
 							
 							</pre>
 							<span class="image main"><img src="images/Class Diagram Simulator.png" alt="" class="center"/></span>
@@ -120,10 +125,13 @@ the user can add the booking and the system would notify the supervisor about th
 
 - <b>canbook():</b> This method calls the isavailable() method of the Simulator class (see below). Since our system assumes that only users who are entitled to make bookings have access to it, 
 it doesn’t check whether the person is entitled to do so.
-- <b>isavailable():</b> This method is called by the canbook() method and checks whether the simulator is available during the requested time slot by comparing the time slot to other bookings 
-or scheduled maintenance activities. If the time slot does not match with any of the aforementioned and the requested capacity matches with the total capacity, the method returns TRUE.
+- <b>isavailable():</b> This method is called by the canbook() method and checks whether the simulator is available 
+during the requested time slot by comparing the time slot to other bookings or scheduled maintenance activities. 
+If the time slot does not match with any of the aforementioned and the requested capacity matches with the total capacity, 
+the method returns TRUE.
 
-<b>Abstractions:</b> For our booking system to work, the program doesn’t need to know the setup of each particular simulator, nor does it need to know the details of each exercise.
+<b>Abstractions:</b> For our booking system to work, the program doesn’t need to know the setup of each particular simulator, 
+nor does it need to know the details of each exercise.
 							
 							</pre>
 							<hr />
