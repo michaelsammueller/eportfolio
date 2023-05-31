@@ -57,25 +57,32 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Unit 3: Programming Languages: History, Concepts (&) Design</h1>
-							<h2>Learning Outcomes:</h2>
-							<p>In this unit, we shall:</p>
-							<ul>
-								<li>Review the history and concepts of programming languages.</li>
-								<li>Investigate language concepts using Python as an example.</li>
-								<li>Describe best practices and methods to overcome common security issues.</li>
-							</ul>
-							<p>On completion of this unit, you will be able to:</p>
-							<ul>
-								<li>Describe some key milestones in the development of programming languages.</li>
-								<li>Outline some of the key paradigms that define the different types of languages.</li>
-								<li>Explain the key concepts that determine the operation of programming languages.</li>
-								<li>Discuss key programming challenges and recommended best practices.</li>
-								<li>Explain what design patterns are and when to use them.</li>
-							</ul>
+							<h1>Unit 5: Artefacts</h1>
+							<h2 class="align-center">Codio</h2>
+							<p>Part of this unit was to complete a Codio learning activity about testing with Python. The following are snippets of my work:</p>
+							<span class="image main"><img src="images/codio_unit5_1.PNG" alt="" class="center"/></span>
+							<p>Based on the suggestions made by the "pylint" module, I changed parts of the code, such as adding a docstring, writing the names of static variables in all caps, and removing trailing whitespaces.</p>
+							<span class="image main"><img src="images/codio_flake8.png" alt="" class="center"/></span>
+							<p>I had fixed all the errors returned by "pylint", and "flake8" did not produce any errors either.</p>
 							<hr />
-							<h2><a href="ssd_unit3_artefacts.html">Artefacts</a></h2>
-							<h2><a href="ssd_unit3_reflection.html">Reflection</a></h2>
+							<p>Running "flake8" on "metricTest.py" returned the following errors:</p>
+							<span class="image main"><img src="images/codio_flake8_1.png" alt="" class="center"/></span>
+							<p>Based on this message, I know that there is a syntax error on line 13.</p>
+							<span class="image main"><img src="images/unit_5_codio_1.png" alt="" class="center"/></span>
+							<p>After fixing that error, a lot of other errors popped up, mainly about the numbers on every line, the length of lines written, incorrect indentation, and trailing whitespaces. I was able to fix these errors, and run "flake8" without returning any more errors.</p>
+							<span class="image main"><img src="images/flake8_code.PNG" alt="" class="center"/></span>
+							<span class="image main"><img src="images/codio_flake8_2.PNG" alt="" class="center"/></span>
+							<hr />
+							<p>I installed "mccabe" in Codio, and verified its installation by running the "pip3 show mccabe" command, which returned the following:</p>
+							<span class="image main"><img src="images/mccabe.PNG" alt="" class="center"/></span>
+							<p>Although it was clearly installed, I was not able to run it, regardless of how I approached it. I tried running the "mccabe sums.py" command direclty, and also tried to run "flake8 mccabe sums.py", but that also did not work.</p>
+							<hr />
+							<h3 class="align-center">equivalence.py</h3>
+							<span class="image main"><img src="images/equivalence.PNG" alt="" class="center"/></span>
+							<p>The code in "equivalence.py" partitions a set of objects into equivalence classes. I experimented a little with the code by changing the range values.</p>
+							<span class="image main"><img src="images/experiment.PNG" alt="" class="center"/></span>
+							<p>I continued my experimentation by changing the equivalence relation and seeing how that affects the same range values.</p>
+							<span class="image main"><img src="images/experiment2.PNG" alt="" class="center"/></span>
 						</div>
 					</div>
 
