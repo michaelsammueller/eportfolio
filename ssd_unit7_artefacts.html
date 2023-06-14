@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael's E-Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/michaelsammuellerlogo.png" alt="" /></span><span class="title">Michael Sammueller</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="ssd_unit1.html">Unit 1 - Introduction to Secure Software Development</a></li>
+							<li><a href="ssd_unit2.html">Unit 2 - UML Modelling to Support Secure System Planning</a></li>
+							<li><a href="ssd_unit3.html">Unit 3 - Programming Languages: History, Concepts (&) Design</a></li>
+							<li><a href="ssd_unit4.html">Unit 4 - Exploring Programming Language Concepts</a></li>
+							<li><a href="ssd_unit5.html">Unit 5 - An Introduction to Testing</a></li>
+							<li><a href="ssd_unit6.html">Unit 6 - Using Linters to Support Python Testing</a></li>
+							<li><a href="ssd_unit7.html">Unit 7 - Introduction to Operating Systems</a></li>
+							<li><a href="ssd_unit8.html">Unit 8 - Cryptography and Its Use in Operating Systems</a></li>
+							<li><a href="ssd_unit9.html">Unit 9 - Developing an API for a Distributed Environment</a></li>
+							<li><a href="ssd_unit10.html">Unit 10 - From Distributed Computing to Microarchitectures</a></li>
+							<li><a href="ssd_unit11.html">Unit 11 - Future trends in Secure Software Development</a></li>
+							<li><a href="ssd_unit12.html">Unit 12 - The Great Tanenbaum-Torvalds Debate Revisited</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Unit 6: Artefacts</h1>
+							<p class="align-center">I had already completed the ePortfolio activities in Unit5. Please see below or check out the <a href="ssd_unit5_artefacts.html">Unit 5 Artefacts page.</a></p>
+							<h2 class="align-center">Codio</h2>
+							<p>Part of this unit was to complete a Codio learning activity about testing with Python. The following are snippets of my work:</p>
+							<span class="image main"><img src="images/codio_unit5_1.PNG" alt="" class="center"/></span>
+							<p>Based on the suggestions made by the "pylint" module, I changed parts of the code, such as adding a docstring, writing the names of static variables in all caps, and removing trailing whitespaces.</p>
+							<span class="image main"><img src="images/codio_flake8.png" alt="" class="center"/></span>
+							<p>I had fixed all the errors returned by "pylint", and "flake8" did not produce any errors either.</p>
+							<hr />
+							<p>Running "flake8" on "metricTest.py" returned the following errors:</p>
+							<span class="image main"><img src="images/codio_flake8_1.png" alt="" class="center"/></span>
+							<p>Based on this message, I know that there is a syntax error on line 13.</p>
+							<span class="image main"><img src="images/unit_5_codio_1.png" alt="" class="center"/></span>
+							<p>After fixing that error, a lot of other errors popped up, mainly about the numbers on every line, the length of lines written, incorrect indentation, and trailing whitespaces. I was able to fix these errors, and run "flake8" without returning any more errors.</p>
+							<span class="image main"><img src="images/flake8_code.PNG" alt="" class="center"/></span>
+							<span class="image main"><img src="images/codio_flake8_2.PNG" alt="" class="center"/></span>
+							<hr />
+							<p>I installed "mccabe" in Codio, and verified its installation by running the "pip3 show mccabe" command, which returned the following:</p>
+							<span class="image main"><img src="images/mccabe.PNG" alt="" class="center"/></span>
+							<p>Although it was clearly installed, I was not able to run it, regardless of how I approached it. I tried running the "mccabe sums.py" command direclty, and also tried to run "flake8 mccabe sums.py", but that also did not work.</p>
+							<hr />
+							<h2 class="align-center">Meeting Notes</h2>
+							<p>This week's meeting was not filled with anyting new, which is why there wasn't much point to taking notes. We spent about 1 1/2 hours going over our design document and making final changes and ammendments, tidying it up for the submission.</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Michael Sammueller. All rights reserved</li><li>Original Design by: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
