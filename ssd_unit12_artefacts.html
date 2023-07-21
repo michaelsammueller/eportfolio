@@ -58,9 +58,39 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Unit 12: Artefacts</h1>
-							<h2 class="align-center">A simple Python Shell</h2>
-							<p>Part of this unit was to write simple Python shell that accepts the following commands:</p>
-							<span class="image main"><img src="images/shell.PNG" alt="" class="center"/></span>
+							<h2 class="align-center">Final Reflection</h2>
+							<p>During this week, I spent a lot of time on my final reflection. I tried to encapsulate as many aspects of this module's content as possible, as well as to reflect on teamwork and the team projects overall. You can find my final reflection <a href="ssd_final_reflection.html">here.</a></p>
+							<hr />
+							<h2 class="align-center">FSC Converter</h2>
+							<span class="image main"><img src="images/ssd_unit8/fsc_generator.png" alt="" class="center"/></span>
+							<p>As part of my job, I am responsible for creating air traffic control simulator exercises. When instructors or external companies request simulator exercises, they sometimes provide excel sheets which include the traffic samples for said exercises. Almost a year ago, I developed a simple Python webapp using Streamlit, that could take these excel sheets and turn them into '.dax' files, a format used within our simulator system. These '.dax' files can be read by the simulator database. However, for label processing to work correctly, and to provide complete functionality, we need an additional '.fsc' file, which includes seven additonal scripts per flightplan. To automate this process, I spent some time at work to create this application using Python. I've tried to incorporate some of the knowledge I had gained during the team project, in regards to the system's architecture. I also tried to include docstrings and comments wherever necessary, as that is something we had to spend a lot of time on after running 'pylint' on our assignment code.</p>
+							<p>I ended up writing three Python files:</p>
+							<ul>
+								<li>main.py</li>
+								<li>extractor.py</li>
+								<li>userinterface.py</li>
+							</ul>
+							<p>'main.py' is the main file in the system, which sets up the __main__ loop, as well as create instance of the extractor and user interface classes. 'extractor.py' includes all the logic for the extractor class, which is responsible for extracting callsigns from '.dax' files and generating the additional scripts. It is also responsible for creating and writing to the new '.fsc' file. 'userinterface.py', as the name suggests, provides the GUI using the tkinter library.</p>
+							<span class="image main"><img src="images/ssd_unit8/fsc_main.png" alt="" class="center"/></span>
+							<span class="image main"><img src="images/ssd_unit8/fsc_extractor.png" alt="" class="center"/></span>
+							<span class="image main"><img src="images/ssd_unit8/fsc_ui.png" alt="" class="center"/></span>
+							<hr />
+							<h3>Download the Python files:</h3>
+							<a href="code/main.py">main.py</a>
+							<p></p>
+							<a href="code/extractor.py">extractor.py</a>
+							<p></p>
+							<a href="code/userinterface.py">userinterface.py</a>
+							<hr />
+							<h2 class="align-center">Monolithic vs Microservice/Microkernel</h2>
+							<p>This title alone could cause debates among computer scientists and system engineers. However, the choice of architectural style heavily depends on the system and the expected demand on the system being designed. For instance, because of growing demand, Netflix decided to migrate from monolithic to microservice in 2009, back when the concept was not well known (Harris, N.D.). While this worked out well for Netflix, there are other other systems or programs that may not require a microservice architecture. Small-scale applications can work well within a monolithic paradigm, while larger, high-demand applications/systems will benefit from a microservice-foucsed architecture.</p>
+							<p>In addition, monolithic applications become, over time, difficult to manage and maintain, which leads to reduced scalability (GeeksforGeeks, 2022). As suggested by Al-Debagy et al (2018), research conducted about the performance of monolithic and microservice systems showed that monolithic systems perform better under smaller loads than microservice-focused systems. This would lead me to believe that smaller applications which are expected to perform under smaller loads are better suited to monolithic architectures, while larger applications which are expected to perform under higher loads are better suited to microservices.</p>
+							<p>The thoughts and arguments mentioned above also apply to the Tanenbaum-Torvalds debate. As mentioned earlier, both approaches have their merits, and the choice heavily depends on the context. While I do agree with Torvalds regarding high performance overhead in microservice architectures, I also agree with Tanenabaum that microservice architectures provide more flexibility and portability. This is a classic argument of trade-offs, where the system architect will have to make a choice between the two. As the world moves towards Saas, IoT, and cloud services, I believe that microservices will be the future, as more and more of our applications and systems are handled by smaller independent services running in the background. A similar prediction was made by Alshuqayran et al (2016).</p>
+							<p><b><u>References</u></b></p>
+							<p>Harris, C. (N.D.) Microservices vs. monolithic architecture. Available from: <a href="https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith">https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith</a> [Accessed 21 July 2023].</p>
+							<p>GeeksforGeeks (2022) Monolithic vs. Microservices architecture. Available from: <a href="https://www.geeksforgeeks.org/monolithic-vs-microservices-architecture/">https://www.geeksforgeeks.org/monolithic-vs-microservices-architecture/</a> [Accessed 21 July 2023].</p>
+							<p>Al-Debay, O. & Martinek, P. (2018) <i>A Comparative Review of Microservices and Monolithic Architectures.</i> 2018 IEEE 18th International Symposium on Computational Intelligence and Informatics (CINTI). Budapest, Hungary. 21-22 November 2018. Available from: <a href="https://ieeexplore.ieee.org/abstract/document/8928192">https://ieeexplore.ieee.org/abstract/document/8928192</a> [Accessed 21 July 2023].</p>
+							<p>Alshuqayran, N., Ali, N. & Evans, R. (2016) <i>A Systematic Mapping Study in Microservice Architecture.</i> 2016 IEEE 9th International Conference on Service-Oriented Computing and Applications (SOCA). Macau, China. 04-06 November 2016. Available from: <a href="https://ieeexplore.ieee.org/abstract/document/7796008/authors#authors">https://ieeexplore.ieee.org/abstract/document/7796008/authors#authors</a> [Accessed 21 July 2023].</p>
 						</div>
 					</div>
 
