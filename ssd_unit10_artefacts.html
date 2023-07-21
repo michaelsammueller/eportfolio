@@ -57,44 +57,39 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Unit 7: Artefacts</h1>
-							<h2 class="align-center">A simple Python Shell</h2>
-							<p>Part of this unit was to write simple Python shell that accepts the following commands:</p>
-							<ul>
-								<li><b>LIST</b> - Lists all files in the current directory</li>
-								<li><b>ADD</b> - Adds two numbers together and provides the results</li>
-								<li><b>HELP</b> - Provides a list of all available commands</li>
-								<li><b>EXIT</b> - Exits the shell</li>
-							</ul>
-							<span class="image main"><img src="images/shell.PNG" alt="" class="center"/></span>
-							<h3 class="align-center">What are the two main security vulnerabilities in this shell?</h3>
-							<p>The two vulnerabilities I can see in this code is that there is no input validation (for example within the "do_add" method), and that the code provides the interface for command injection by using the "onecmd" method.</p>
-							<h3 class="align-center">What is one recommendation that would increase the security of the shell?</h3>
-							<p>From what I can see, the best thing to do would be to add some from of input validation to the shell, which would solve both problems mentioned above, at least to some extent.</p>
-							<h3 class="align-center">Improvements to security</h3>
-							<p>The first thing I would do is add some form of input validaton to the "do_add" method. By adding a "while" loop to the code, the shell will continously ask for user input until it receives two integers. If the user adds anything other than integers, the code will catch the error.</p>
-							<span class="image main"><img src="images/shell2.png" alt="" class="center"/></span>
-							<p>Other than that, I would like to add some form of input validation to the "onecmd" method. I have adjusted the code so that it converts the user input, and then compares the command to a list of acceptable commands. If the user input is in the allowed commands, it is executed. If it is not, then the command will be rejected.</p>
-							<span class="image main"><img src="images/shell4.png" alt="" class="center"/></span>
-							<span class="image main"><img src="images/shell3.png" alt="" class="center"/></span>
+							<h1>Unit 10: Artefacts</h1>
+							<h2 class="align-center">TrueCrypt Discussion Summary Post</h2>
+							<p>We were tasked to write a summary post based on the feedback from our peers and the tutor, as well as the knowledge gathered during the previous units:</p>
+							<span class="image main"><img src="images/truecrypt_final.png" alt="" class="center"/></span>
 							<hr />
-							<h3 class="align-center">Developing an API for a Distributed Environment</h3>
-							<span class="image main"><img src="images/flaskfull.png" alt="" class="center"/></span>
-							<h3 class="align-center">Question 1</h3>
-							<p>Run the API.py code. Take a screenshot of the terminal output. What command did you use to compile and run the code?</p>
-							<span class="image main"><img src="images/flask.png" alt="" class="center"/></span>
-							<p>To compile and debug the code, I used the inbuilt debugger within Visual Studio Code.</p>
-							<h3 class="align-center">Question 2</h3>
-							<p>Run the following command at the terminal prompt: http://127.0.0.1:5000/user/Ann - What happens and why?</p>
-							<span class="image main"><img src="images/flask2.png" alt="" class="center"/></span>
-							<p>When this URL is accessed, the code retrieves the entry for the specified user, which includes name, age, and occupation, as was specified in the code.</p>
-							<h3 class="align-center">Question 3</h3>
-							<p>Run the following command at the terminal: http://127.0.0.1:5000/user/Adam - What happens when this command is run, and why?</p>
-							<span class="image main"><img src="images/flask3.png" alt="" class="center"/></span>
-							<p>When the URL is accesse, the webpage states that the user cannot be found. This is expected and correct behaviour, as we did not specify this specific user within our user directory. As the user cannot be found, the webpage returns the statement as instructed as part of the "get()" method.</p>
-							<h3 class="align-center">Question 4</h3>
-							<p>What capability is achieved by the flask library?</p>
-							<p>The flask library enables us to create websites and webapps with both Python and HTML code. It allows us to run a webserver, host HTML pages and interact with these pages using Python code.</p>
+							<h3 class="align-center">Faceted Data</h3>
+							<p>The article by Schmitz et al (2016) presents an interesting idea, where sensitive data, or data in general, is presented to each user differently, depending on their assigned privileges. Contrary to other popular forms of access control, information is not being hidden from the user, but specific "facets" of this information is displayed, based on the privileges of the observer.</p>
+							<p><b><u>Pros:</u></b></p>
+							<ul>
+								<li>Data is not hidden completely, removing the risk of altering or otherwise negatively influencing user experience</li>
+								<li>Facets of data are dynamically presented to the user, instead of being completely hidden or completely visible based on user privilege</li>
+							</ul>
+							<p><b><u>Cons</u></b></p>
+							<ul>
+								<li>"Faceted Data", as a concept, seems somewhat complicated or complex, especially to users not familiar with the concept</li>
+								<li>Might affect performance in larger systems with large user base or large data set</li>
+							</ul>
+							<p>Overall, I would say that this is a very interesting approach to access control; one that I was not familiar with prior to reading this article. The same concept can be applied to error handling, as was done by Narala (2015) in their Master's thesis, where they introduce "Faceted Exception Handling" to ensure dynamic information flow. When an application experiences an error, it might accidentally leak sensitive information in its error messages, which could be prevented using the same principles as discussed by Schmitz et al (2016).</p>
+							<p><b><u>References</u></b></p>
+							<p>Schmitz, T., Rhodes, D., Austin, T. H., Knowles, K. & Flanagan, C. (2016) Faceted Dynamic Information Flow via Control and Data Monads. <i>Proceedings of the 5th International Conference on Principles of Security and Trust</i> 9365: 3-23. Available from: <a href="http://kennknowles.com/research/schmitz-rhodes-austin-knowles-flanagan.post.16.faceted.pdf">http://kennknowles.com/research/schmitz-rhodes-austin-knowles-flanagan.post.16.faceted.pdf</a> [Accessed 5 July 2023].</p>
+							<p>Narala, S. T. (2015) <i>Introducing Faceted Exception Handling for Dynamic Information Flow.</i> Masters Thesis. San Jose State University. Available from: <a href="https://scholarworks.sjsu.edu/etd_projects/406/">https://scholarworks.sjsu.edu/etd_projects/406/</a> [Accessed 5 July 2023].</p>
+							<hr />
+							<h3>Implementation in Python</h3>
+							<p>To implement such a concept in Python, and keeping within the object-oriented paradigm, I would create a class which can store the various facets of a specific piece of data, as well as methods to retrieve such data based on the users privileges. I would then attempt to create internal logic that calls upon said methods based on which type of user is currently logged into the system, and ensure that the correct "facet" is displayed.</p>
+							<p>In the context of my team's project, which is to create a health monitoring application for astronauts on the ISS, we also require some form of access control. We have three roles within our system:</p>
+							<ul>
+								<li>Astronaut</li>
+								<li>Moderator</li>
+								<li>Superadmin</li>
+							</ul>
+							<p>These roles have different privileges, meaning the way they interact with the system depends on their role/privilege. I have created a small prototype below, which represents how we could use "faceted data" within our application.</p>
+							<span class="image main"><img src="images/ssd_unit8/prototype.png" alt="" class="center"/></span>
+							<span class="image main"><img src="images/ssd_unit8/faceted_output.png" alt="" class="center"/></span>
 						</div>
 					</div>
 
