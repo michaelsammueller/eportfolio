@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael's E-Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../../index.html" class="logo">
+									<span class="symbol"><img src="../../images/michael_sticker.png" alt="" /></span><span class="title">Michael Sammueller</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="ssd_unit1.html">Unit 1 - Introduction to Secure Software Development</a></li>
+							<li><a href="ssd_unit2.html">Unit 2 - UML Modelling to Support Secure System Planning</a></li>
+							<li><a href="ssd_unit3.html">Unit 3 - Programming Languages: History, Concepts (&) Design</a></li>
+							<li><a href="ssd_unit4.html">Unit 4 - Exploring Programming Language Concepts</a></li>
+							<li><a href="ssd_unit5.html">Unit 5 - An Introduction to Testing</a></li>
+							<li><a href="ssd_unit6.html">Unit 6 - Using Linters to Support Python Testing</a></li>
+							<li><a href="ssd_unit7.html">Unit 7 - Introduction to Operating Systems</a></li>
+							<li><a href="ssd_unit8.html">Unit 8 - Cryptography and Its Use in Operating Systems</a></li>
+							<li><a href="ssd_unit9.html">Unit 9 - Developing an API for a Distributed Environment</a></li>
+							<li><a href="ssd_unit10.html">Unit 10 - From Distributed Computing to Microarchitectures</a></li>
+							<li><a href="ssd_unit11.html">Unit 11 - Future trends in Secure Software Development</a></li>
+							<li><a href="ssd_unit12.html">Unit 12 - The Great Tanenbaum-Torvalds Debate Revisited</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Unit 10: Artefacts</h1>
+							<h2 class="align-center">TrueCrypt Discussion Summary Post</h2>
+							<p>We were tasked to write a summary post based on the feedback from our peers and the tutor, as well as the knowledge gathered during the previous units:</p>
+							<span class="image main"><img src="../../images/truecrypt_final.png" alt="" class="center"/></span>
+							<hr />
+							<h3 class="align-center">Faceted Data</h3>
+							<p>The article by Schmitz et al (2016) presents an interesting idea, where sensitive data, or data in general, is presented to each user differently, depending on their assigned privileges. Contrary to other popular forms of access control, information is not being hidden from the user, but specific "facets" of this information is displayed, based on the privileges of the observer.</p>
+							<p><b><u>Pros:</u></b></p>
+							<ul>
+								<li>Data is not hidden completely, removing the risk of altering or otherwise negatively influencing user experience</li>
+								<li>Facets of data are dynamically presented to the user, instead of being completely hidden or completely visible based on user privilege</li>
+							</ul>
+							<p><b><u>Cons</u></b></p>
+							<ul>
+								<li>"Faceted Data", as a concept, seems somewhat complicated or complex, especially to users not familiar with the concept</li>
+								<li>Might affect performance in larger systems with large user base or large data set</li>
+							</ul>
+							<p>Overall, I would say that this is a very interesting approach to access control; one that I was not familiar with prior to reading this article. The same concept can be applied to error handling, as was done by Narala (2015) in their Master's thesis, where they introduce "Faceted Exception Handling" to ensure dynamic information flow. When an application experiences an error, it might accidentally leak sensitive information in its error messages, which could be prevented using the same principles as discussed by Schmitz et al (2016).</p>
+							<p><b><u>References</u></b></p>
+							<p>Schmitz, T., Rhodes, D., Austin, T. H., Knowles, K. & Flanagan, C. (2016) Faceted Dynamic Information Flow via Control and Data Monads. <i>Proceedings of the 5th International Conference on Principles of Security and Trust</i> 9365: 3-23. Available from: <a href="http://kennknowles.com/research/schmitz-rhodes-austin-knowles-flanagan.post.16.faceted.pdf">http://kennknowles.com/research/schmitz-rhodes-austin-knowles-flanagan.post.16.faceted.pdf</a> [Accessed 5 July 2023].</p>
+							<p>Narala, S. T. (2015) <i>Introducing Faceted Exception Handling for Dynamic Information Flow.</i> Masters Thesis. San Jose State University. Available from: <a href="https://scholarworks.sjsu.edu/etd_projects/406/">https://scholarworks.sjsu.edu/etd_projects/406/</a> [Accessed 5 July 2023].</p>
+							<hr />
+							<h3>Implementation in Python</h3>
+							<p>To implement such a concept in Python, and keeping within the object-oriented paradigm, I would create a class which can store the various facets of a specific piece of data, as well as methods to retrieve such data based on the users privileges. I would then attempt to create internal logic that calls upon said methods based on which type of user is currently logged into the system, and ensure that the correct "facet" is displayed.</p>
+							<p>In the context of my team's project, which is to create a health monitoring application for astronauts on the ISS, we also require some form of access control. We have three roles within our system:</p>
+							<ul>
+								<li>Astronaut</li>
+								<li>Moderator</li>
+								<li>Superadmin</li>
+							</ul>
+							<p>These roles have different privileges, meaning the way they interact with the system depends on their role/privilege. I have created a small prototype below, which represents how we could use "faceted data" within our application.</p>
+							<span class="image main"><img src="../../images/ssd_unit8/prototype.png" alt="" class="center"/></span>
+							<span class="image main"><img src="../../images/ssd_unit8/faceted_output.png" alt="" class="center"/></span>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Michael Sammueller. All rights reserved</li><li>Original Design by: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

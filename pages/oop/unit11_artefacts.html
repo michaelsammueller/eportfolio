@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael's E-Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../../index.html" class="logo">
+									<span class="symbol"><img src="../../images/michael_sticker.png" alt="" /></span><span class="title">Michael Sammueller</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="oop_unit1.html">Unit 1 - Introduction to Python Programming and the OO Programming Paradigm</a></li>
+							<li><a href="oop_unit2.html">Unit 2 - Object Oriented Analysis</a></li>
+							<li><a href="oop_unit3.html">Unit 3 - Unified Modelling Language (UML)</a></li>
+							<li><a href="oop_unit4.html">Unit 4 - Applying a UML Model to a Program Implementation</a></li>
+							<li><a href="oop_unit5.html">Unit 5 - More on Classes</a></li>
+							<li><a href="oop_unit6.html">Unit 6 - Abstract Methods and Interfaces</a></li>
+							<li><a href="oop_unit7.html">Unit 7 - Debugging, Error Handling, Data Structures and Data Search</a></li>
+							<li><a href="oop_unit8.html">Unit 8 - Data Structures and Data Search in Practice</a></li>
+							<li><a href="oop_unit9.html">Unit 9 - Packaging and Testing</a></li>
+							<li><a href="oop_unit10.html">Unit 10 - Testing Code in Practice</a></li>
+							<li><a href="oop_unit11.html">Unit 11 - Pointers, References, Memory, and Design Patterns</a></li>
+							<li><a href="oop_unit12.html">Unit 12 - Working with Design Patterns to Structure Code</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Unit 11: Artefacts and Reflection</h1>
+							<h2 class="align-center">Working on my assignment</h2>
+							<p class="align-center">Download the assignment files <a href="https://github.com/michaelsammueller/university/tree/main/Module%2011%20Assignment/python-project">here.</a></p>
+							<p>The majority of my time during this unit was spent finalizing my assignment. When I first started working on it, I decided to separate the main operations from each other and assign them to their own Python file. After sketching out the initial classes and methods, I had three Python files:</p>
+							<ul>
+								<li>routeplanner.py</li>
+								<li>maintenancemonitor.py</li>
+								<li>energymonitor.py</li>
+							</ul>
+							<p>"routeplanner.py" is responsible for planning routes, as the name suggests. It will receive user input and the car's current location. Based on where it is and where the user wants to go, it would then navigate the car via the shortest route. While planning this system, I came across the A*- as well as Dijkstra's algorithm. After doing some research about these algorithms, I decided to implement Dijkstra's algorithm. I created a "graph" network for a ficticious version of Qatar's capital, Doha, where I currently reside. This graph network would include some main locations the user can navigate to, as well as "weights" or "costs" between them. The algorithm would then find the shortest route and "navigate" the car between current location and destination.</p>
+							<h2>References for Dijkstra's Algorithm</h2>
+							<ul>
+								<li>Bhargava, A. (2016) <i>Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People.</i> New York: Manning.</li>
+								<li>GeeksforGeeks (2023) Python Program for Dijkstra's shortest path algorithm | Greedy Algo-7. Available from: <a href="https://www.geeksforgeeks.org/python-program-for-dijkstras-shortest-path-algorithm-greedy-algo-7/">https://www.geeksforgeeks.org/python-program-for-dijkstras-shortest-path-algorithm-greedy-algo-7/</a> [Accessed 2 April 2023].</li>
+								<li>StackAbuse (2023) Dijkstra's Algorithm. Available from: <a href="https://stackabuse.com/courses/graphs-in-python-theory-and-implementation/lessons/dijkstras-algorithm/">https://stackabuse.com/courses/graphs-in-python-theory-and-implementation/lessons/dijkstras-algorithm/</a> [Accessed 2 April 2023].</li>
+								<li>AlgoDaily (N.D.) An Illustrated Guide to Dijkstra's Algorithm. Available from: <a href="https://algodaily.com/lessons/an-illustrated-guide-to-dijkstras-algorithm/python">https://algodaily.com/lessons/an-illustrated-guide-to-dijkstras-algorithm/python</a> [Accessed 3 April 2023].</li>
+							</ul>
+							<p>Choosing to include this algorithm in my code cost a lot of time, as I first had to learn how this algorithm works, and how I can customize it to fit my purposes. In the end though, I am happy I chose to include it, as it provides my software with much needed functionality, and it helps to demonstrate how my own functions work and how data is stored within my program.</p>
+							<h2>The other operations</h2>
+							<p>Next to "routeplanner.py", I had created "energymonitor.py" and "maintenancemonitor.py". "energymonitor.py" is responsible for monitoring the car's battery and energy levels. It is also responsible to approve routes calculated by the route planner. If the car doesn't have enough energy at all, the EnergyMontior can instruct the car to move to the closest charging station.</p>
+							<p>"maintenancemonitor.py" is responsible for monitoring all car parts and their conditions. Whenever the car takes a trip, the MaintenaneMonitor checks each part's deterioration and alerts the user in case a part has deteriorated too much.</p>
+							<h2>Other files</h2>
+							<p>Along the Python files for the three main operations, I created a Python file which hosts all navigational data, such as the "graph" network for Dijkstra's algorithm, as well as a list of charging stations within the city, which is used by the EnergyMonitor. I also created a file which hosts the user interface (userinterface.py). This file not only includes the code for the UserInterface class and its associated methods, but for a small terminal UI which can be used to execute various aspects of my code.</p>
+							<h2>The last steps</h2>
+							<p>Now began one of the main tasks: Testing. I had already used print() statements throughout my ocde to test individual functions. However, I now needed a way to test every Python file. Because I decided to write an individual file for each of the main operations, I had to import classes, objects, and other data between files. This meant I needed a way to continously test all aspects of my code without cluttering my terminal. That is where "assert" statements came in handy. I wrote an assert statement for each class, as well as each statement, and tested my code until it passed all tests without any errors raised. Next, I chose to use "pylint" to test my code design and formatting. Finally, I wrote the "ReadMe" file to dicuss various aspects of my code, and explain how to use it.</p>
+							<h2 class="align-center">Reflection</h2>
+							<p>Overall I am happy with how I tackled this assignment. I definitely think I might have planned much more than I was asked to do, but whenever I am working on a project, I want it to be perfect. There is nothing wrong with that, but this sometimes results in more work than necessary. For example: Did I really have to use Dijkstra's algorithm? Probably not. Does it add value to my project and bring it closer to a real driverless car system? Definitely.</p>
+							<p>Another aspect I want to improve on is testing. I waited until the end to write my assert statements. This did not help me in any way, it just made it more difficult to test the code later. A few errors and mistakes went unnoticed, and I had to rewrite large chunks of my code. The main cause of this was that I used several python files for my code, not just one. In the future, I plan to write assert statements or other tests while still working on my code. Additionally, I was so focused on the classes and methods of my project, that I completely forgot to write an actual user interface that could be used to run my code, so I had to do that at the end as well. For future projects, I will include the testing in my planning phase, where I would like to sketch out tests for my code, as well as ways to run the code, so I can avoid these issues towards the end.</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Michael Sammueller. All rights reserved</li><li>Original Design by: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

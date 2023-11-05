@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael's E-Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../../index.html" class="logo">
+									<span class="symbol"><img src="../../images/michael_sticker.png" alt="" /></span><span class="title">Michael Sammueller</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="ssd_unit1.html">Unit 1 - Introduction to Secure Software Development</a></li>
+							<li><a href="ssd_unit2.html">Unit 2 - UML Modelling to Support Secure System Planning</a></li>
+							<li><a href="ssd_unit3.html">Unit 3 - Programming Languages: History, Concepts (&) Design</a></li>
+							<li><a href="ssd_unit4.html">Unit 4 - Exploring Programming Language Concepts</a></li>
+							<li><a href="ssd_unit5.html">Unit 5 - An Introduction to Testing</a></li>
+							<li><a href="ssd_unit6.html">Unit 6 - Using Linters to Support Python Testing</a></li>
+							<li><a href="ssd_unit7.html">Unit 7 - Introduction to Operating Systems</a></li>
+							<li><a href="ssd_unit8.html">Unit 8 - Cryptography and Its Use in Operating Systems</a></li>
+							<li><a href="ssd_unit9.html">Unit 9 - Developing an API for a Distributed Environment</a></li>
+							<li><a href="ssd_unit10.html">Unit 10 - From Distributed Computing to Microarchitectures</a></li>
+							<li><a href="ssd_unit11.html">Unit 11 - Future trends in Secure Software Development</a></li>
+							<li><a href="ssd_unit12.html">Unit 12 - The Great Tanenbaum-Torvalds Debate Revisited</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Unit 7: Artefacts</h1>
+							<h2 class="align-center">A simple Python Shell</h2>
+							<p>Part of this unit was to write simple Python shell that accepts the following commands:</p>
+							<ul>
+								<li><b>LIST</b> - Lists all files in the current directory</li>
+								<li><b>ADD</b> - Adds two numbers together and provides the results</li>
+								<li><b>HELP</b> - Provides a list of all available commands</li>
+								<li><b>EXIT</b> - Exits the shell</li>
+							</ul>
+							<span class="image main"><img src="../../images/shell.PNG" alt="" class="center"/></span>
+							<h3 class="align-center">What are the two main security vulnerabilities in this shell?</h3>
+							<p>The two vulnerabilities I can see in this code is that there is no input validation (for example within the "do_add" method), and that the code provides the interface for command injection by using the "onecmd" method.</p>
+							<h3 class="align-center">What is one recommendation that would increase the security of the shell?</h3>
+							<p>From what I can see, the best thing to do would be to add some from of input validation to the shell, which would solve both problems mentioned above, at least to some extent.</p>
+							<h3 class="align-center">Improvements to security</h3>
+							<p>The first thing I would do is add some form of input validaton to the "do_add" method. By adding a "while" loop to the code, the shell will continously ask for user input until it receives two integers. If the user adds anything other than integers, the code will catch the error.</p>
+							<span class="image main"><img src="../../images/shell2.PNG" alt="" class="center"/></span>
+							<p>Other than that, I would like to add some form of input validation to the "onecmd" method. I have adjusted the code so that it converts the user input, and then compares the command to a list of acceptable commands. If the user input is in the allowed commands, it is executed. If it is not, then the command will be rejected.</p>
+							<span class="image main"><img src="../../images/shell4.PNG" alt="" class="center"/></span>
+							<span class="image main"><img src="../../images/shell3.PNG" alt="" class="center"/></span>
+							<hr />
+							<h3 class="align-center">Developing an API for a Distributed Environment</h3>
+							<span class="image main"><img src="../../images/flaskfull.PNG" alt="" class="center"/></span>
+							<h3 class="align-center">Question 1</h3>
+							<p>Run the API.py code. Take a screenshot of the terminal output. What command did you use to compile and run the code?</p>
+							<span class="image main"><img src="../../images/flask.PNG" alt="" class="center"/></span>
+							<p>To compile and debug the code, I used the inbuilt debugger within Visual Studio Code.</p>
+							<h3 class="align-center">Question 2</h3>
+							<p>Run the following command at the terminal prompt: http://127.0.0.1:5000/user/Ann - What happens and why?</p>
+							<span class="image main"><img src="../../images/flask2.PNG" alt="" class="center"/></span>
+							<p>When this URL is accessed, the code retrieves the entry for the specified user, which includes name, age, and occupation, as was specified in the code.</p>
+							<h3 class="align-center">Question 3</h3>
+							<p>Run the following command at the terminal: http://127.0.0.1:5000/user/Adam - What happens when this command is run, and why?</p>
+							<span class="image main"><img src="../../images/flask3.PNG" alt="" class="center"/></span>
+							<p>When the URL is accesse, the webpage states that the user cannot be found. This is expected and correct behaviour, as we did not specify this specific user within our user directory. As the user cannot be found, the webpage returns the statement as instructed as part of the "get()" method.</p>
+							<h3 class="align-center">Question 4</h3>
+							<p>What capability is achieved by the flask library?</p>
+							<p>The flask library enables us to create websites and webapps with both Python and HTML code. It allows us to run a webserver, host HTML pages and interact with these pages using Python code.</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Michael Sammueller. All rights reserved</li><li>Original Design by: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
