@@ -68,7 +68,26 @@
                             <span class="image main"><img src="../../images/sepm/sepm_unit2_peerpost_2.png" alt="" class="center"/>
                                 <h4 class="align-center">Peer Response 2</h4>
                             <span class="image main"><img src="../../images/sepm/sepm_unit2_peerresponse_2.png" alt="" class="center"/>
-                            <h4 class="align-center">Gherkin Statements: Coffee Machine</h4>
+                            <p></p>
+                            <hr />
+                            <h3 class="align-center">Gherkin Statements: Coffee Machine</h3>
+                            <p><b>Feature: Warming Up</b></p>
+                            <p><i>Scenario: Pressing the "ON" button</i></p>
+                            <p>Given that the coffee machine is plugged in</p>
+                            <p>When the "ON" button is pressed</p>
+                            <p>Then the coffee machine should start warming up.</p>
+                            <p><b>Feature: Grinding Coffee Beans</b></p>
+                            <p><i>Scenario: User presses "Espresso" button</i></p>
+                            <p>Given that the coffee machine has warmed up and there is water in the tank</p>
+                            <p>When the user presses the "Espresso" button</p>
+                            <p>Then the machine should start grinding beans.</p>
+                            <p><b>Feature: Water Level Sensor</b></p>
+                            <p><i>Scenario: Water Tank Empty</i></p>
+                            <p>Given that the machine is plugged in and the "ON" button has been pressed</p>
+                            <p>When the user presses any of the coffee buttons</p>
+                            <p>And the water level sensor detects a low water level</p>
+                            <p>Then the machine should not start grinding beans</p>
+                            <p>And the user should be alerted to refill the water tank.</p>
 						</div>
 					</div>
 
