@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael's E-Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../../index.html" class="logo">
+									<span class="symbol"><img src="../../images/michael_sticker.png" alt="" /></span><span class="title">Michael Sammueller</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+				            <<li><a href="sepm_unit1.html">Unit 1 - Introduction to Software Engineering Project Management</a></li>
+				            <li><a href="sepm_unit2.html">Unit 2 - Study: Why Projects Fail and Gathering Requirements Exercise</a></li>
+				            <li><a href="sepm_unit3.html">Unit 3 - Estimating, Planning and Risk</a></li>
+				            <li><a href="sepm_unit4.html">Unit 4 - Estimating Tools and Risk Assessment</a></li>
+                            <li><a href="sepm_unit5.html">Unit 5 - User Experience</a></li>
+                            <li><a href="sepm_unit6.html">Unit 6 - pytest and Test-Driven Development</a></li>
+                            <li><a href="sepm_unit7.html">Unit 7 - Software Development Life Cycles</a></li>
+                            <li><a href="sepm_unit8.html">Unit 8 - Python Data Structures</a></li>
+                            <li><a href="sepm_unit9.html">Unit 9 - Quality Management Strategy</a></li>
+                            <li><a href="sepm_unit10.html">Unit 10 - Software Quality Monitoring in Python</a></li>
+                            <li><a href="sepm_unit11.html">Unit 11 - Software Engineering Project Management: Future Trends</a></li>
+                            <li><a href="sepm_unit12.html">Unit 12 - The Case for the Future Direction of Software Engineering Project Management</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Meeting 6 Notes</h1>
+                            <p>As mentioned on the home page for this module, the meeting notes were generated using Zoom's AI summary feature. Some of these notes have been altered for accuracy.</p>
+							<h3>Quick Recap</h3>
+                            <p>The team discussed the COCOMO algorithm for calculating software, hardware, and staff costs for a project. They also discussed integrating Michael's algorithms with Tarek's GUI, and potentially replacing the GUI with a command-line interface to make the system more user-friendly. The team discussed EDC's complaints and operating system requirements, agreeing to adjust the design to include an updated OS sand chipboard which fits within the budget. Tarek faced some difficulty usinsg Pycharm, but resolved the issues with guidance from Brad.</p>
+                            <h3>Summary - COOCMO Method for Project Cost Estimation</h3>
+                            <p>Michael presented his methods for calculating the total cost of software, hardware, and staff for a project. He mentioned a specific method using the COCOMO algorithm to estimate effor and cost based on lines of code. Tarek asked for clarification on the difference between total cost and total estimated cost, with Michael stating that the methods calculate the actual cost, but to also fulfill the "estimation" requirements, COCOMO is used to estimate cost. The team also discussed a system that matches staff members to components, considering factors such as available staff, cost, and working days. The group agreed that using a set of keywords to assign capabilities to components and staff members simplifies the process and helps with optimization.</p>
+                            <h3>Project Progress and Improvements - Discussion</h3>
+                            <p>The team discussed the progress and potential improvements. Michael and Brad worked on a set of functionalities, while Tarek struggled with understanding the Tkinter library and sought assisstance from the others. The team agreed to meet again to further work on the project, with Tarek planning to add more features to his Tkinter GUI. Michael suggested incorporating Tarek
+                            s JSON file into the project, and Tarek agreed to push his code to GitHub for further collaboration. The team also decided to include a UML diagram in their presentation, with Michael planning to update the current one to reflect the changes made. The team agreed to meet again later in the week to further work on integrating the cost calculation algorithms with the user interface.</p>
+                            <h3>Integration and Automation of Calculation Program</h3>
+                            <p>Brad, Tarek, and Michael discussed the integration of their separate programs for calculations. Tarek clarified that Michael would work with the JSON file, whihc Tarek's program would read and convert into a dictionary for Michael's algorithm to process. The team considered making the system more user-friendly by automating the process of calculating staff costs, with Tarek proposing the use of a dropdown box. However, due to technical issues, Tarek was unable to show the other window and suggested they meet again to finalize the details. The team also discussed the UI requirements for their assignment and considered using a terminal interface instead of a full user interface. They agreed to give Tarek two more days to see if he could make it work. If not, they would pivot to a terminal interface and integrate it with Michael's algorithm. The team also agreed to decide on the final displaly format, which would inform the structure of the JSON data that Michael's backend-code would output.</p>
+                            <h3>Iterating over JSON files for Project Calculations</h3>
+                            <p>Tarek shared his previous project experiences and loops that iterate over JSON files. He proposed using this for the current project, and Brad agreed that the JSON file had most of the necessary infomration for the calculations. Tarek also suggested pushing the JSON file to GitHub for review. Michael agreed to review the file and test its compatibility with his algorithms. Tarek also showed the CLI menu and how it interacts with the JSON file. Brad highlighted that most of the system was already designed and suggested they focus on developing the GUI next.</p>
+                            <h3>Calculator Requirements and EDC Response - Discussion</h3>
+                            <p>Brad discussed an official response to EDC's complaints and the requirements of the modified system. The team discussed the operating system requirements, which include 512kB of RAM, a CPU, I/O chip, as well as a list of key components to ensure the calculator can handle all it needs to do. They plan to find the cheapest way to meet the requirements. The next step is to look into the actual schedule for design and build, which is unclear due to the lack of design time.</p>
+                            <h3>EDC Project: OS, Chipboard, and Budget Adjustments</h3>
+                            <p>Michael, Tarek, and Brad discussed the components and requirements for the EDC system. They noted that one operating system was included in the initial system design, but a second one was now required. The team also discussed the need to adjust the design to include an updated OS and chipboard while staying within their budget. Michael mentioned that EDC had dropped about 20% of their original requirements. Tarek expressed the need to update the delivery plan to account for two systems, one for EDC and one for the public. The team agreed to include the standard office programs, but they were uncertain about including elements from the first unit, due to changes in the requirements list.</p>
+                            <h3>Presentation Content, Assumptions, and Design Issues</h3>
+                            <p>Brad and Tarek discussed the content of the presentation and decided to focus on the first six weeks, with the understanding that this was not a strict requirement. Michael clarified that the tutor suggested making their assumptions clear for grading purposes. Haaris agreed and proposed adding a section before each slide outlining key assumptions. Brad planned to continue working on his proposed design and its cost implications, while Tarek planned to rebuild the GUI to hold all the necessary information, and work with Brad and Michael on integrating Michael's algorithsm into the UI. Tarek faced difficulties while working with Pycharm and sought verification from the team. After some guidance from Brad, Tarek resolved the issue and the changes were pushed to GitHub.</p>
+                            <h3>File Location and Merge Conflict Resolution</h3>
+                            <p>Tarek was unable to locate the 'prooject_cost.json' file, which had been moved to the main branch but not his. After some confusion regarding the file structure, Brad guided Tarek through the steps to locate the file on his local PC, resolving the issue. It was decided that Tarek should continue working on his branch and later create a pull request to merge his changes into the main branch. An issue was identified where Tarek's version of the main branch had local changes not present on the remote version, and they discussed possible solutions for aligning the two.</p>
+                            <h3>Interface Work and Presentation Planning</h3>
+                            <p>Tarek decided to work on the interface in the terminal and might seek help from Brad and Michael. They also discussed the assignment, including creating a fully costed plan, a schedule, and a presentation. The team decided to record the presentation individually and have Haaris edit it together. They assigned roles for the presentation and decided to make the total presentation 20 minutes long, with each person speaking for around 5 minutes. Haaris was assigned to take care of video editing and the team agreed to communicate via the WhatsApp group for further updates.</p>
+                            <h3>Next Steps</h3>
+                            <ul>
+                                <li>Michael and Tarek will work on integrating the cost estimation and calculation algorithms into Tarek's GUI.</li>
+                                <li>Michael will update the UML diagram to reflect the current system design.</li>
+                                <li>Tarek will continue working on the UI and may try to use the terminal interface if the GUI doesn't work out.</li>
+                                <li>Brad will look into the original proposed design to see how much it would cost to change it to accommodate the new OS and chipboard.</li>
+                                <li>Tarek and Brad will work together to integrate Michael's algorithms with the GUI.</li>
+                            </ul>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Michael Sammueller. All rights reserved</li><li>Original Design by: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+
+	</body>
+</html>
