@@ -62,6 +62,14 @@
                             <p>Initially, my code suffered from what seemed like a bug, which caused inflated staffing costs. A seemingly easy fix turned into a full-blown investigation of me trying to figure out why this was happening. Luckily for me, I had spent a significant amount of time commenting my code whilst coding it, making it easy for me to go back to some of the original code and immediately see why I solved a certain problem in that manner. After several hours of questioning the meaning of life and my ability to program, I finally discovered what the problem was.</p>
                             <p>Originally, whenever the program called a method which would assign staff to a certain task, the method would automatically inflate the staff member's working days value by however many days it would take to design, code, or test that component. The issue was that, if I called the same method several times in a row, I would get different values each time. That is because the work day's value would never be reset to its original state, meaning that these methods would repeatedly assign staff to the same component, inflating their days incorrectly and causing different monetary values to be returned each time. By adding two more methods, one that stores the original state of a staff member's working days, and one that resets it to said original state, the issue was finally resolved. After making some minor adjustments to the calculation logic, as well as the values added to the JSON file, we were finally presented with a calculation result that matched our manual calculation efforts.</p>
                             <p>Other than playing Cyber Sherlock Holmes, I spent some time looking into current and future trends such as low-code and no-code, as well as code-reuse, to try and determine which would be the most influential in the years to come. I'm glad that, from a study perspective, this unit was relatively easy to complete, as it allowed me to focus most of my time and energy on the final team submission. I also spent a lot of time this week planning what I would say during our presentation.</p>
+                            <p><b>Addendum: </b>During the most recent team meeting, we discussed our plan for the presentation. I informed my team members about what I would like to talk about:</p>
+                            <ul>
+                                <li>UML Class Diagram.</li>
+                                <li>Explain individual classes and their methods.</li>
+                                <li>Explain what happens once the user presses 'Calculate'.</li>
+                                <li>Explain the COCOMO algorithm and assumptions.</li>
+                                <li>Explain the unit tests and linters used for testing.</li>
+                            </ul>
 						</div>
 					</div>
 
