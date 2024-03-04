@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael's E-Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../../index.html" class="logo">
+									<span class="symbol"><img src="../../images/michael_sticker.png" alt="" /></span><span class="title">Michael Sammueller</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="ism_unit1.html">Unit 1 - An Introduction to Security and Risk Management</a></li>
+							<li><a href="ism_unit2.html">Unit 2 - Threat Modelling Exercises</a></li>
+							<li><a href="ism_unit3.html">Unit 3 - Introduction to Threat Modelling and Management</a></li>
+							<li><a href="ism_unit4.html">Unit 4 - Security Standards, Frameworks and Disaster Recovery</a></li>
+							<li><a href="ism_unit5.html">Unit 5 - Future Trends in Security and Risk Management</a></li>
+							<li><a href="ism_unit6.html">Unit 6 - The Great Debate - What Will be the Most Influential Trend in ISM in the Next 5 Years?</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Unit 5: Reflection & Artefacts</h1>
+                            <h2>Plan</h2>
+							<p>I've been using these past few days to work on my submission for the next assignment. I enjoy coding and solving problems, so this one is right up my alley. First, I decided to quickly sketch out what I think my application should include. After reading over the requirements, I decided on the following:</p>
+                            <ul>
+                                <li><b>GUI</b>: I want my user to be able to interact with the application via a graphical user interface. Especially when it comes to programs that visualise something, I like to work with GUIs. The best way to do this, for an application this size, within Python, will be to use Tkinter, a library which I have worked with before.</li>
+                                <li><b>TreeView</b>: I want my application to have a tree view, which will allow the user to see the hierarchy of the tree and assign costs/values to each node. The program should have a "calculate" button, which, when clicked, should calculate the minimum and maximum cost associated with this particular tree. Thsi way, the user can interact with the tree before generating a visual representation of it.</li>
+                                <li><b>Visualisation</b>: The program should include a "visualise" button, which, when pressed, should generate a visual representation of the attack tree, based on the attack tree specification. I also want this visualisation to include the minimum and maximum values calculated above, as part of a legend of some sort. To achieve this, I am planning to use the matplotlib and networkx libraries.</li>
+                                <li><b>JSON</b>: I have decided to work with JSON files, as I have worked with them before as part of my assignment in the 'Secure Software Design' module. I have created an outline for an attack tree specification, which I want my attack trees to use. I have tried to find an industry standard format online, but besides file formats, it seems like this varies from industry to industry. I have therefore attempted to keep my JSON  format relatively straight forward, so that it can be easily adjusted at a later point in time.</li>
+                                <li><b>Object-Oriented</b>: Although it is a relatively small application, in terms of lines of code, I like to follow an object-oriented paradigm. This means I will try separate parts of the code into different classes, improving the maintainability and reusability of the code. This also makes it easier for me to work on the code, as I will immediately know where to find specific parts of the code whenever a bug occurs during debugging.</li>
+                            </ul>
+                            <p><b>Summary:</b> If everything works out the way I have planned it above, the user will be able to load a JSON file into the application, and will be presented with an hierarchical tree view of the attack tree. Within this tree view, the user will be able to assign values or costs to each node, and calculate a mininum and maximum cost/damage associated with this attack tree. The user can then ask the program to visualize the tree. The program will generate an attack tree graph based on the JSON file, with a legend that includes those 'minimum' and 'maximum' values calculated in the previous step. The user can then safe this graph as a '.png' file on their machine, to share with other stakeholders.</p>
+                            <hr>
+                            <h2>Structure</h2>
+                            <p>To complete the steps described above, I propose the following structure for my code:</p>
+                            <ol>
+                                <li>First, I will create a 'master' file (main.py), which I will use to create a prototype of the application. Within this file, I will create a working version of the application, allowing me to experiment with the code. This also means that, if I were to run out of time later, I would have a working version of the application.</li>
+                                <li>Decision point - There are two ways I can approach the next step. I can either separate the classes ('GUI', 'File', 'Graph') within the same file, or create a file for each one ('gui.py', 'file.py', 'graph.py'). Since the code is relatively small for this type of application, both structures would work. I will see which one is easier to implement.</li>
+                                <li>For the last step, I want to package my application so it can be run via a '.exe' or '.dmg' file directly on the user's machine. This vastly improves the user experience, especially for non-technical users.</li>
+                            </ol>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Michael Sammueller. All rights reserved</li><li>Original Design by: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+
+	</body>
+</html>
