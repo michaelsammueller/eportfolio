@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael's E-Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../../index.html" class="logo">
+									<span class="symbol"><img src="../../images/michael_sticker.png" alt="" /></span><span class="title">Michael Sammueller</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+				            <li><a href="sepm_unit1.html">Unit 1 - Introduction to Software Engineering Project Management</a></li>
+				            <li><a href="sepm_unit2.html">Unit 2 - Study: Why Projects Fail and Gathering Requirements Exercise</a></li>
+				            <li><a href="sepm_unit3.html">Unit 3 - Estimating, Planning and Risk</a></li>
+				            <li><a href="sepm_unit4.html">Unit 4 - Estimating Tools and Risk Assessment</a></li>
+                            <li><a href="sepm_unit5.html">Unit 5 - User Experience</a></li>
+                            <li><a href="sepm_unit6.html">Unit 6 - pytest and Test-Driven Development</a></li>
+                            <li><a href="sepm_unit7.html">Unit 7 - Software Development Life Cycles</a></li>
+                            <li><a href="sepm_unit8.html">Unit 8 - Python Data Structures</a></li>
+                            <li><a href="sepm_unit9.html">Unit 9 - Quality Management Strategy</a></li>
+                            <li><a href="sepm_unit10.html">Unit 10 - Software Quality Monitoring in Python</a></li>
+                            <li><a href="sepm_unit11.html">Unit 11 - Software Engineering Project Management: Future Trends</a></li>
+                            <li><a href="sepm_unit12.html">Unit 12 - The Case for the Future Direction of Software Engineering Project Management</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Unit 4: Artefacts</h1>
+							<h2 class="align-center">Collaborative Discussion</h2>
+							<p class="align-center">Part of this unit was to make a summary post based on peer responses, as well as the knowledge we have gathered over the past few units:</p>
+							<h4 class="align-center">Summary Post</h4>
+							<span class="image main"><img src="../../images/sepm/sepm_unit3_summary.png" alt="" class="center"/></span>
+                            <h2 class="align-center">Python Estimation Program</h2>
+                            <p><b>Task 1:</b> Create a python program that implements one of the estimation methods covered in the Lecturecast. You can use the Jupyter Notebook workspace in Codio and save your work to your GitHub repository.</p>
+                            <p></p>
+                            <p>One of the methods covered in the Lecturecast was COCOMO. In order to get an idea about how to implement COCOMO in Python, I conducted a little research and stumbled across this implementation on <a href="https://www.geeksforgeeks.org/software-engineering-cocomo-model/">GeeksforGeeks.com.</a></p>
+                            <span class="image main"><img src="../../images/sepm/unit4/cocomo.png" alt="" class="center"/></span>
+                            <p>One of the most important aspects to remember about COCOMO, is that its estimations heavily rely on LOC (lines of code). If this metric is not available, then it is relatively difficult to use the COCOMO model to predict cost.</p>
+                            <p><b>Addendum:</b> I revisited this activity in a later unit, specifically whilst working on the submission for the second assignment. As planned, I wanted to implement COCOMO as part of the Cost Estimator Python program. I took what I had learnt from the implementation above, and adjusted it to fit my "ProjectEstimator" class. </p>
+                            <span class="image main"><img src="../../images/sepm/unit4/cocomo_implement.png" alt="" class="center"/></span>
+                            <p>In order for the method to estimate project staffing costs, it accepts two arguments: 'loc' and 'method'. As defined by Boehm, there are three different methods within COCOMO.</p>
+                            <ul>
+                                <li>Organic</li>
+                                <li>Semi-Detached</li>
+                                <li>Embedded</li>
+                            </ul>
+                            <p>These three methods refer to the type of software engineering project, allowing the COCOMO method to fine-tune its constants for a more accurate estimation. Within my function, I allow the user to specify the method/project type, as well as the amount of LOC written in this project. Using these two values and applying the COCOMO formulas gives us a rough estimate of how much the staffing would cost, based on the amount of effort required, as well as an assumed average cost per staff per month. For my example, I calculated the average staff cost based on the resources table provided to us as part of the case study for our assignment.</p>
+                            <p>Running the code as part of the rest of the estimators' code gives the following result:</p>
+                            <span class="image main"><img src="../../images/sepm/unit4/cocomo_output.PNG" alt="" class="center"/></span>
+                            <p>The calculated cost based on hard fact results in GBP 98,000, while the COCOMO estimation gives us an estimated cost of GBP 62,146, based on average staff cost and estimated effort required to create the system.</p>
+                            <hr />
+                            <p><b>Task 2:</b> Read the articles by Verner et al (2014) and Anton & Nucu (2020) and then answer the following questions:</p>
+                            <ul>
+                                <li>What are the main risks that the authors identify?</li>
+                                <li>Which of the frameworks discussed in the Unit 3 Lecturecast would you use to capture and categorise the risks? </li>
+                            </ul>
+                            <h3>Verner et al. (2014) risks</h3>
+                            <ul>
+                                <li><b>Communication/Collaborations:</b> Lack of face-to-face meetings, impacting trust and decision quality. Geographical distance adds to complexity for planning and coordinating activities, causing waits and delays in feedback.</li>
+                                <li><b>Vendor Selection Infrastructure:</b> Incompatible or poor infrastructure.</li>
+                                <li><b>Cultural Risks:</b> Language differences can cause misunderstandings, misinterpretations, and loss of information.</li>
+                            </ul>
+                            <p><i>Personal Anecdote:</i> Having worked in air traffic control simulations for several years now, and having been part of a few implementation projects, I have definitely experienced the above risks myself. For instance, as part of upgrading the existing airspace in preparation for the FIFA 2022 Qatar World Cup, my employer hired a consultancy firm to provide an airspace designer/planner to help us with designing a new airspace. While his experience in the field was greatly appreciated, he was located in Australia, which meant that whenever we were awake and at work, he was asleep, and vice versa. This meant that either side had to wait around 12 -24 hours to get feedback on their proposed changes.</p>
+                            <p>At my current workplace, we have a multicultural staff, hailing from all accross the globe. Occassionally, this results in misunderstandings and miscommunications, due to the language barrier.</p>
+                            <h3>Anton & Nucu (2020) Risks</h3>
+                            <p>In a slightly different approach, Anton & Nucu (2020) categorize Enterprise Risk Management into four distinct areas:</p>
+                            <ol>
+                                <li><b>ERM Implementation:</b> The application of ERM across various domains.</li>
+                                <li><b>Determinants of ERM Adoption:</b> Understanding the factors that lead to adopting ERM systems.</li>
+                                <li><b>Effectiveness of ERM:</b> Assessing how effective ERM processes are.</li>
+                                <li><b>Other Aspects of ERM:</b> Includes other topics such as strategy and maturity of ERM.</li>
+                            </ol>
+                            <hr />
+                            <h3>Framework to capture risks</h3>
+                            <p>Based on the Lecturecast in Unit 3, I think <b>PRINCE2</b> and <b>PMBOK</b> would be a good place to start. Both frameworks include guides about how to identify and mitigate risks, especially in terms of software engineering projects.</p>
+                            <p><i>Personal Anecdote:</i> I have previously studied the "Information Security Management" module and learned a lot about risk management frameworks such as OCTAVE, STRIDE and DREAD, among many others. This is the first time I have heard about PRINCE2 and PMBOK, so I am looking forward to learning more about them in the coming units.</p>
+                            <h2 class="align-center">Hardware Design</h2>
+                            <p>I also spent a lot of time this week to create a hardware design for the system of our first assignment. In the meantime, Tarek was also working on one so that we could compare what we have come up with.</p>
+                            <span class="image main"><img src="../../images/sepm/unit4/hardware%20design.PNG" alt="" class="center"/></span>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Michael Sammueller. All rights reserved</li><li>Original Design by: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+
+	</body>
+</html>
